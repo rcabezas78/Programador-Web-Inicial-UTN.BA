@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio-2-Unidad Nº 4</title>
+</head>
+<body>
+    <script>
+        let x=1;
+        //const valor = parseInt(prompt(`Ingrese el valor ${x}  de ${cuantos}:`, ''));
+        let arreglo = parseInt(prompt('Ingrese cantidad de elementos que tendrá el arreglo:', ''));
+        let numero; 
+        let mayor = 0;
+        for (let i = 0; i < arreglo; i++) {
+            numero=parseInt(prompt(`Ingrese número: ${x} de ${arreglo}`))
+            if (mayor < numero) {
+                mayor =numero
+                
+            }
+            x=x+1;
+        }
+        document.write(`El número mayor del arreglo es: ${mayor}`);
+    </script>
+</body>
+
+</html>
