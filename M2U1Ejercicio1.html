@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Módulo 2 Unidad 1: Ejercicio Nº1</title>
+    <link rel="stylesheet" href="M2U1Ejercicio1.css">
+</head>
+
+<body>
+
+    <h1>Dibujar cuadrados</h1>
+
+    <!-- Crea los cuadrados -->
+    <div class=" cuadrado rojo" id="rojo"></div>
+
+    <div class="cuadrado azul" id="azul"></div>
+
+    <div class="cuadrado verde" id="verde"></div>
+
+    <script>
+        // CSS
+        // const cuadrado1 = document.getElementsByClassName('cuadrado1')[0];
+        // const rojo = document.getElementById('rojo');
+
+        // const cuadrado2 = document.getElementsByClassName('cuadrado2')[0];
+        // const azul = document.getElementById('azul');
+
+        // const cuadrado3 = document.getElementsByClassName('cuadrado3')[0];
+        // const verde = document.getElementById('verde');
+
+        //Pinta los cuadrados
+        const cuadrados = document.getElementsByClassName('cuadrado');
+        const colores = ['red', 'blue', 'green'];
+
+        dibujarCuadrados(cuadrados, colores);
+
+        // rojo.addEventListener('click', function () {
+        //     cuadrado1.classList.add('rojo');
+        // });
+        // azul.addEventListener('click', function () {
+        //     cuadrado2.classList.add('azul');
+        // });
+        // verde.addEventListener('click', function () {
+        //     cuadrado3.classList.add('verde');
+        // });
+
+        function dibujarCuadrados(cuadrados, colores) {
+
+            for (let i = 0; i < cuadrados.length; i++) {
+                cuadrados[i].addEventListener('click', () => {
+                    document.body.style.backgroundColor = colores[i];
+                });
+            }
+        }
+
+        function cambiarFondo(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        rojo.addEventListener('click', () => cambiarFondo('red'));
+        azul.addEventListener('click', () => cambiarFondo('blue'));
+        verde.addEventListener('click', () => cambiarFondo('green'));
+
+    </script>
+</body>
+
+</html>
