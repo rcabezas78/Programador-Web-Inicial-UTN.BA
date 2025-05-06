@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo 2 Unidad 1: Ejercicio Nº2</title>
+    <link rel="stylesheet" href="M2U1Ejercicio2.css">
+
 </head>
+
 <body>
-    
+    <form>
+        <label class="titulo" for="titulo texto">Ingrese Texto</label><br>
+        <textarea class="titulo" id="texto" class="texto" name="texto" rows="6" cols="26"
+            oninput="contarCaracteres()"></textarea><br>
+
+        <label class=titulo for="contadorTexto">Caracteres:</label>
+        <input type="text" id="contadorTexto" class="contador" readonly>
+    </form><br>
+
+    <script>
+        function contarCaracteres() {
+            var texto = document.getElementById('texto').value;
+            var contador = texto.length;
+            document.getElementById('contadorTexto').value = contador;
+        }
+
+    </script>
 </body>
+
 </html>
