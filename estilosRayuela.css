@@ -1,0 +1,73 @@
+h1 {
+    color: green;
+}
+
+.container-H1 {
+    color: red;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.columna {
+    justify-items: right;
+    /* text-align: right;  */
+
+}
+
+.col {
+    width: 40px;
+}
+
+.row {
+    height: 60px;
+}
+
+.borde {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.borde-arriba {
+    border-top: 2px solid black;
+}
+
+.borde-abajo {
+    border-bottom: 2px solid black;
+}
+
+.borde-interior>.col {
+    border: 1px solid white;
+}
+
+.borde-derecho {
+    border-right: 2px solid black;
+}
+
+.borde-izquierdo {
+    border-left: 2px solid black;
+}
+
+.borde-medio {
+    border-bottom: 1px solid white;
+}
+
+.borde-superior {
+    border-top: 1px solid white;
+}
+
+.borde-inferior {
+    border-bottom: 1px solid white;
+}
+
+span {
+    display: inline-block;
+    min-width: 100px;
+    /* o width: 100px para ancho fijo */
+    min-height: 50px;
+    /* o height: 50px para alto fijo */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    /* para centrar verticalmente el texto */
+}
