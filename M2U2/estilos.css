@@ -1,47 +1,23 @@
-.cuadro{
-    height: 3.5cm;
-    width: 3.5cm;
-    margin-top: 1px;
-    margin-left: 1px;
-    margin-right: 1px;
-    
-}
-.negro{
-    border: 2px solid red;
-    color:white;
-    background-color: black;
-}
-.blanco{
-    border: 2px solid red;
-    background-color: white;
-}
-.contenedor{
-    justify-content: center; /* Centra los elementos hijos (la fila) horizontalmente */
-    max-width: 1200px; /* Ejemplo de ancho máximo */
-    margin-left: auto;
-    margin-right: auto; /* Centra el contenedor en sí mismo si tiene un ancho definido */
-    
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(8, 70px); /* 8 columnas de 60px */
+  grid-template-rows: repeat(8, 70px);    /* 8 filas de 60px */
+  border: 2px solid black;
 }
 
-.contenedor-columnas {
-    display: flex; /* Convierte el contenedor en un flex container */
-    justify-content: center; /* Centra los elementos hijos (la fila) horizontalmente */
-    /* Opcional: Puedes añadir un ancho máximo para que no se extienda por toda la pantalla */
-    max-width: 960px; /* Ejemplo de ancho máximo */
-    margin-left: auto;
-    margin-right: auto; /* Centra el contenedor en sí mismo si tiene un ancho definido */
-  }
-  
-  .row {
-    display: flex; /* Si quieres que las columnas estén una al lado de la otra */
-    width: 100%; /* O un ancho específico para la fila */
-  }
-  
-  .col {
-    border: 1px solid red; /* Para visualizar los bordes como en tu imagen */
-    /* Otros estilos para tus columnas */
-  }
-  .h1 h1 {
-    text-align: center; /* Si quieres que el título esté centrado */
-    margin-bottom: 100px; /* Añade un margen de 20 píxeles debajo del título */
-  }
+.cuadro {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.blanco {
+  background-color: #f0d9b5;
+}
+
+.negro {
+  background-color: #b58863;
+}
