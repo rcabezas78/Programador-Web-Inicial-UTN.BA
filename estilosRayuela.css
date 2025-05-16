@@ -1,73 +1,89 @@
-h1 {
-    color: green;
+body {
+    background-color: #f0f8ff;
 }
 
-.container-H1 {
-    color: red;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 20px;
+.rayuela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.columna {
-    justify-items: right;
-    /* text-align: right;  */
-
+.casilla {
+    width: 120px;
+    height: 90px;
+    border: 2px solid #0d6efd;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #e7f1ff;
+    margin: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.col {
-    width: 40px;
+.casilla.doble {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 240px;
+    
 }
 
-.row {
-    height: 60px;
+ .casilla.doble>div {
+     width: 90px;
+     /* height: 90px;  */
+     /* border: 2px solid #0d6efd;  */
+     /* border-radius: 15px;  */
+    /* display: flex; */
+    /* align-items: center; */
+     justify-content: center; 
+    /* background-color: #dbeafe; */
+    /* font-size: 28px; */
+    /* font-weight: bold; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+} 
+
+.cielo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px dashed #198754;
+    background-color: #d1e7dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #198754;
+    margin-top: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.borde {
-    border: 1px solid black;
-    padding: 5px;
+.casilla.doble {
+    position: relative;
 }
 
-.borde-arriba {
-    border-top: 2px solid black;
+.casilla.doble::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    width: 2px;
+    background-color: #0d6efd;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
-.borde-abajo {
-    border-bottom: 2px solid black;
-}
-
-.borde-interior>.col {
-    border: 1px solid white;
-}
-
-.borde-derecho {
-    border-right: 2px solid black;
-}
-
-.borde-izquierdo {
-    border-left: 2px solid black;
-}
-
-.borde-medio {
-    border-bottom: 1px solid white;
-}
-
-.borde-superior {
-    border-top: 1px solid white;
-}
-
-.borde-inferior {
-    border-bottom: 1px solid white;
-}
-
-span {
-    display: inline-block;
-    min-width: 100px;
-    /* o width: 100px para ancho fijo */
-    min-height: 50px;
-    /* o height: 50px para alto fijo */
-    text-align: center;
-    vertical-align: middle;
-    line-height: 50px;
-    /* para centrar verticalmente el texto */
+.casilla.doble > div {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
 }
