@@ -1,6 +1,40 @@
-footer{
+footer {
     background-color: #aaa;
 }
-.hero{
-    background:
+
+.hero {
+    background: url(../img/canchaModificada3.jpg) no-repeat;
+    background-size: cover;
+    height: 50vh;
+    /*height: 100vh; esto al 100vh hace que baje el Hero ocupe verticalmente toda la pantalla*/
+    min-height: 400px;
+    color: white;
 }
+
+h1,h2{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+/* html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+ #carouselExampleIndicators {
+  max-width: 600px; /* Cambiá este valor según el tamaño deseado */
+  margin: 0 auto;   /* Centra el carrusel horizontalmente */
+}
+
+/*#carouselExampleIndicators .carousel-item img {
+  width: 100%;      /* Asegura que la imagen se ajuste al contenedor */
+  /*height: auto;     /* Mantiene la proporción */
+  /*object-fit: cover;
+}*/
+
+#carouselExampleIndicators .carousel-item img {
+  height: 350px; /* Ajustá este valor según lo que necesites */
+  object-fit: contain; /* Mantiene el recorte estético si la imagen es más grande */
+  width: 100%;
+}
+
