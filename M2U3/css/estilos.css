@@ -1,11 +1,13 @@
 footer {
     background-color: #aaa;
+    margin-top: auto;
+    height: 25px;
 }
 
 .hero {
     background: url(../img/canchaModificada3.jpg) no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 53vh;
     /*height: 100vh; esto al 100vh hace que baje el Hero ocupe verticalmente toda la pantalla*/
     min-height: 400px;
     color: white;
@@ -22,8 +24,10 @@ h1,h2{
 } */
 
  #carouselExampleIndicators {
-  max-width: 600px; /* Cambiá este valor según el tamaño deseado */
+  max-width: 600px; /* Cambiá este valor según el tamaño deseado */ /*ajusta la flechas de izquierda y derecha a la foto*/
   margin: 0 auto;   /* Centra el carrusel horizontalmente */
+  background-color:ivory;
+
 }
 
 /*#carouselExampleIndicators .carousel-item img {
@@ -33,8 +37,28 @@ h1,h2{
 }*/
 
 #carouselExampleIndicators .carousel-item img {
-  height: 350px; /* Ajustá este valor según lo que necesites */
+  height: 400px; /* Ajustá este valor según lo que necesites */
   object-fit: contain; /* Mantiene el recorte estético si la imagen es más grande */
   width: 100%;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro translúcido */
+border-radius: 50%;
+}
+
+.foto-grupal {
+  width: 100%;         /* Se adapta al ancho del contenedor */
+  max-width: 800px;    /* Límite máximo para que no se estire demasiado */
+  height: auto;        /* Mantiene la proporción */
+  display: block;
+  margin: 0 auto;      /* Centrada */
+}
+
+
+body {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
