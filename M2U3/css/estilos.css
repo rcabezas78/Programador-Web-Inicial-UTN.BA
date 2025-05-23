@@ -37,7 +37,7 @@ h1,h2{
 }*/
 
 #carouselExampleIndicators .carousel-item img {
-  height: 400px; /* Ajustá este valor según lo que necesites */
+  height: 350px; /* Ajustá este valor según lo que necesites */
   object-fit: contain; /* Mantiene el recorte estético si la imagen es más grande */
   width: 100%;
 }
@@ -61,4 +61,35 @@ body {
 display: flex;
 flex-direction: column;
 min-height: 100vh;
+}
+
+
+
+/* index2.html */
+
+.centro{
+  margin-top: 56px;
+}
+
+.izquierda{
+  margin-top: 56px;
+}
+
+.derecha{
+  margin-top: 56px;
+}
+
+
+.rectangulo-superior {
+background-color: #0d6efd;
+color: white;
+min-height: 200px;
+padding: 20px;
+}
+
+.rectangulo-inferior {
+background-color: #6c757d;
+color: white;
+min-height: 270px;
+padding: 20px;
 }
