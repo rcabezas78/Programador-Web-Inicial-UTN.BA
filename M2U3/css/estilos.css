@@ -1,20 +1,23 @@
 footer {
-    background-color: #aaa;
-    margin-top: auto;
-    height: 25px;
+  background-color: #aaa;
+  margin-top: auto;
+  height: 25px;
 }
 
 .hero {
-    background: url(../img/canchaModificada3.jpg) no-repeat;
-    background-size: cover;
-    height: 53vh;
-    /*height: 100vh; esto al 100vh hace que baje el Hero ocupe verticalmente toda la pantalla*/
-    min-height: 400px;
-    color: white;
+  background: url(../img/canchaModificada3.jpg) no-repeat;
+  background-size: cover;
+  height: 53vh;
+  /*height: 100vh; esto al 100vh hace que baje el Hero ocupe verticalmente toda la pantalla*/
+  min-height: 400px;
+  min-width: 200;
+  /* width: auto; */
+  color: white;
 }
 
-h1,h2{
-    font-family: 'Alfa Slab One', cursive;
+h1,
+h2 {
+  font-family: 'Alfa Slab One', cursive;
 }
 
 /* html, body {
@@ -23,73 +26,157 @@ h1,h2{
     padding: 0;
 } */
 
- #carouselExampleIndicators {
-  max-width: 600px; /* Cambiá este valor según el tamaño deseado */ /*ajusta la flechas de izquierda y derecha a la foto*/
-  margin: 0 auto;   /* Centra el carrusel horizontalmente */
-  background-color:ivory;
+#carouselExampleIndicators {
+  max-width: 600px;
+  /* Cambiá este valor según el tamaño deseado */
+  /*ajusta la flechas de izquierda y derecha a la foto*/
+  margin: 0 auto;
+  /* Centra el carrusel horizontalmente */
+  background-color: ivory;
 
 }
 
 /*#carouselExampleIndicators .carousel-item img {
   width: 100%;      /* Asegura que la imagen se ajuste al contenedor */
-  /*height: auto;     /* Mantiene la proporción */
-  /*object-fit: cover;
+/*height: auto;     /* Mantiene la proporción */
+/*object-fit: cover;
 }*/
 
 #carouselExampleIndicators .carousel-item img {
-  height: 350px; /* Ajustá este valor según lo que necesites */
-  object-fit: contain; /* Mantiene el recorte estético si la imagen es más grande */
+  height: 350px;
+  /* Ajustá este valor según lo que necesites */
+  object-fit: contain;
+  /* Mantiene el recorte estético si la imagen es más grande */
   width: 100%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro translúcido */
-border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* fondo oscuro translúcido */
+  border-radius: 50%;
 }
 
 .foto-grupal {
-  width: 100%;         /* Se adapta al ancho del contenedor */
-  max-width: 800px;    /* Límite máximo para que no se estire demasiado */
-  height: auto;        /* Mantiene la proporción */
+  width: 100%;
+  /* Se adapta al ancho del contenedor */
+  max-width: 800px;
+  /* Límite máximo para que no se estire demasiado */
+  height: auto;
+  /* Mantiene la proporción */
   display: block;
-  margin: 0 auto;      /* Centrada */
+  margin: 0 auto;
+  /* Centrada */
 }
-
 
 body {
-display: flex;
-flex-direction: column;
-min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-
-
 
 /* index2.html */
 
-.centro{
+.centro {
   margin-top: 56px;
+  border: 1px solid #000;
+  background-color: #cccccc;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+
 }
 
-.izquierda{
+.izquierda {
   margin-top: 56px;
+  border: 1px solid #000;
+  background-color: #cccccc;
+  padding: 20px;
+  width: 200px;  
+  margin-right: auto;
+  margin-left: 0;
+
 }
 
-.derecha{
+.derecha {
   margin-top: 56px;
+  border: 1px solid #000;
+  background-color: #cccccc;
+  padding: 20px;
+  margin-right: 0;
+  margin-left: auto;
 }
-
 
 .rectangulo-superior {
-background-color: #0d6efd;
-color: white;
-min-height: 200px;
-padding: 20px;
+  background-color: #0d6efd;
+  color: white;
+  min-height: 100px;
+  padding: 20px;
+
 }
 
 .rectangulo-inferior {
-background-color: #6c757d;
-color: white;
-min-height: 270px;
-padding: 20px;
+  background-color: #6c757d;
+  color: white;
+  border: 2px solid #000;
+  /* min-height: 270px; */
+}
+
+.rectangulo-izquierdo {
+  background-color: #6c757d;
+  color: white;
+  min-height: 270px;
+  min-width: 20px;
+  padding: 20px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  /* o el valor que uses */
+  margin: 0 auto;
+}
+
+
+.contenido-izquierdo,
+.contenido-derecho {
+  width: 100%;
+}
+
+
+.contenido-superior {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.imagen-ajustada {
+  width: 100%;
+  display: block;
+  /* Elimina espacios en blanco por defecto */
+}
+
+
+.fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenido-izquierdo,
+.contenido-derecho {
+  width: 20%;
+  /* o el ancho que necesites */
+}
+
+.contenido-central {
+  width: 60%;
+  /* ocupa el espacio entre los dos */
+  text-align: center;
 }
