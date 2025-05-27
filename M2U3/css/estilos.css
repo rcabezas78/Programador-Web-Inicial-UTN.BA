@@ -89,7 +89,6 @@ body {
 
 }
 
-<<<<<<< HEAD
 
 .izquierda {
   margin-top: 56px;
@@ -117,9 +116,7 @@ body {
   /* left: -5px; */
   /* antes era -10px, ahora se mueve más a la izquierda */
 
-
-=======
->>>>>>> 8c00620de0c019e791115907e826f1a2074c13c2
+}
 
 .izquierda {
 margin-top: 56px;
@@ -147,22 +144,13 @@ box-sizing: border-box;
   border: 1px solid #000;
   /* background-color: #cccccc; */
   /* padding: 20px; */
-<<<<<<< HEAD
   width: 100%;
-=======
-  width: 100%; 
->>>>>>> 8c00620de0c019e791115907e826f1a2074c13c2
   height: 400px;
 }
 
 .central-contenido {
-<<<<<<< HEAD
   padding-left: 0;
   padding-right: 0;
-=======
-padding-left: 0;
-padding-right: 0;
->>>>>>> 8c00620de0c019e791115907e826f1a2074c13c2
 }
 
 /* .rectangulo-superior {
@@ -192,11 +180,6 @@ padding-right: 0;
   justify-content: center;
   width: auto;
   max-width: 1200px;
-<<<<<<< HEAD
-
-=======
- 
->>>>>>> 8c00620de0c019e791115907e826f1a2074c13c2
 }
 
 
