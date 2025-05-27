@@ -1,9 +1,14 @@
 footer {
   background-color: #aaa;
   margin-top: auto;
-  height: 25px;
+  height: 32px;
 }
-
+.escudo_izquierdo{
+  background-color: yellow;
+}
+.escudo_derecho{
+  background-color: red;
+}
 .hero {
   /* background: url(../img/canchaModificada3.jpg) no-repeat; */
   background-size: cover;
@@ -45,7 +50,7 @@ h2 {
 }*/
 
 #carouselExampleIndicators .carousel-item img {
-  height: 350px;
+  height: 283px;
   /* Ajustá este valor según lo que necesites */
   object-fit: contain;
   /* Mantiene el recorte estético si la imagen es más grande */
@@ -81,62 +86,63 @@ body {
 
 .centro {
   margin-top: 56px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   background-color: red;
   margin-right: auto;
   margin-left: auto;
-  padding: 20px;
+  padding: 10px;
 
 }
 
-
 .izquierda {
-  margin-top: 56px;
-  border: 1px solid #000;
+  /* margin-top: 56px;   */
   background-color: #cccccc;
-  padding: 20px;
+  padding: 10px;
   max-width: 100%;
-  /* o simplemente eliminá width */
   margin-right: auto;
   margin-left: 0;
   box-sizing: border-box;
 
 }
 
-.izq_abajo {
-  border: 1px solid #000;
-  /* padding: 5px; */
-  /* margin-right: auto; */
-  /* margin-left: 0; */
-  max-width: 100%;
-  /* o simplemente eliminá width */
-  /* box-sizing: border-box; */
-  position: absolute;
-  /* bottom: 0; */
-  /* left: -5px; */
-  /* antes era -10px, ahora se mueve más a la izquierda */
-
-}
-
-.izquierda {
-margin-top: 56px;
+.izquierda_abajo {
 border: 1px solid #000;
 background-color: #cccccc;
-padding: 20px;
+padding: 10px;
 max-width: 100%; /* o simplemente eliminá width */
 margin-right: auto;
 margin-left: 0;
 box-sizing: border-box;
 }
 
-
 .derecha {
-  margin-top: 56px;
-  border: 1px solid #000;
+  /* margin-top: 56px; */
+  /* border: 1px solid #000; */
   background-color: #cccccc;
-  padding: 20px;
+  /* padding: 10px; */
   margin-right: 0;
   margin-left: auto;
+}
+
+.derecha_abajo {
+  /* margin-top: 56px; */
+  border: 1px solid #000;
+  background-color: #cccccc;
+  /* padding: 20px; */
+  margin-right: 0;
+  margin-left: auto;
+  
+}
+
+.centro_abajo {
+  /* margin-top: 56px; */
+  border: 1px solid #000;
+  background-color: #cccccc;
+  /* padding: 20px; */
+  margin-right: 0;
+  margin-left: auto;
+  height: 290px;
+  
 }
 
 .imagen {
@@ -151,6 +157,15 @@ box-sizing: border-box;
 .central-contenido {
   padding-left: 0;
   padding-right: 0;
+}
+
+.testimonios{
+  background-color: #dadada;
+  padding-bottom: 4rem !important;
+}
+.testimonio{
+  text-align: center;
+  padding: 30px 50px  ;
 }
 
 /* .rectangulo-superior {
