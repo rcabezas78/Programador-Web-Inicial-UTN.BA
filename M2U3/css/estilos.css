@@ -33,7 +33,7 @@ h2 {
     padding: 0;
 } */
 
-#carouselExampleIndicators {
+#carouselFotos {
   max-width: 600px;
   /* Cambiá este valor según el tamaño deseado */
   /*ajusta la flechas de izquierda y derecha a la foto*/
@@ -49,7 +49,7 @@ h2 {
 /*object-fit: cover;
 }*/
 
-#carouselExampleIndicators .carousel-item img {
+#carouselFotos .carousel-item img {
   height: 283px;
   /* Ajustá este valor según lo que necesites */
   object-fit: contain;
@@ -73,6 +73,7 @@ h2 {
   /* Mantiene la proporción */
   display: block;
   margin: 0 auto;
+  background-color: yellow;
   /* Centrada */
 }
 
@@ -80,6 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: red;
 }
 
 /* index2.html */
@@ -137,13 +139,14 @@ box-sizing: border-box;
 }
 
 .centro_abajo {
-  margin-top: 70px;
-  border: 1px solid #000;
-  background-color: #cccccc;
+  margin-top: 40px;
+  /* border: 1px solid #000; */
+  /* background-color: #cccccc; */
+  background-color: red;
   /* padding: 20px; */
   margin-right: 0;
   margin-left: auto;
-  height: 290px;
+  /* height: 470px; */
   
 }
 
@@ -162,12 +165,17 @@ box-sizing: border-box;
 }
 
 .testimonios{
-  background-color: #dadada;
+  /* background-color: #dadada; */
+  background-color: red;
   padding-bottom: 4rem !important;
 }
 .testimonio{
   text-align: center;
   padding: 30px 50px  ;
+}
+
+.blanco{
+  color: white;
 }
 
 .staff{
