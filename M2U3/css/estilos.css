@@ -107,7 +107,8 @@ body {
 
 .izquierda_abajo {
 border: 1px solid #000;
-background-color: #cccccc;
+/* background-color: #cccccc; */
+background-color: yellow;
 padding: 10px;
 max-width: 100%; /* o simplemente eliminá width */
 margin-right: auto;
@@ -127,7 +128,8 @@ box-sizing: border-box;
 .derecha_abajo {
   /* margin-top: 56px; */
   border: 1px solid #000;
-  background-color: #cccccc;
+  /* background-color: #cccccc; */
+  background-color: red;
   /* padding: 20px; */
   margin-right: 0;
   margin-left: auto;
@@ -135,7 +137,7 @@ box-sizing: border-box;
 }
 
 .centro_abajo {
-  /* margin-top: 56px; */
+  margin-top: 70px;
   border: 1px solid #000;
   background-color: #cccccc;
   /* padding: 20px; */
@@ -168,6 +170,18 @@ box-sizing: border-box;
   padding: 30px 50px  ;
 }
 
+.staff{
+  background: #efefef;
+}
+
+.letraTituloCard {
+
+  font-size: 15px;
+}
+
+.letraNombreCard{
+  font-size: 13px;
+}
 /* .rectangulo-superior {
   background-color: #0d6efd;
   color: white;
