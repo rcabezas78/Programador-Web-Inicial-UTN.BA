@@ -81,7 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: red;
+  /* background-color: red; */
 }
 
 /* index2.html */
@@ -136,6 +136,11 @@ box-sizing: border-box;
   margin-right: 0;
   margin-left: auto;
   
+}
+
+.logo{
+  width: 10px;
+  height: 15px;
 }
 
 .centro_abajo {
