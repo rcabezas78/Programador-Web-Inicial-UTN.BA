@@ -3,12 +3,15 @@ footer {
   margin-top: auto;
   height: 32px;
 }
-.escudo_izquierdo{
+
+.escudo_izquierdo {
   background-color: yellow;
 }
-.escudo_derecho{
+
+.escudo_derecho {
   background-color: red;
 }
+
 .hero {
   /* background: url(../img/canchaModificada3.jpg) no-repeat; */
   background-size: cover;
@@ -108,14 +111,15 @@ body {
 }
 
 .izquierda_abajo {
-border: 1px solid #000;
-/* background-color: #cccccc; */
-background-color: yellow;
-padding: 10px;
-max-width: 100%; /* o simplemente eliminá width */
-margin-right: auto;
-margin-left: 0;
-box-sizing: border-box;
+  border: 1px solid #000;
+  /* background-color: #cccccc; */
+  background-color: yellow;
+  padding: 10px;
+  max-width: 100%;
+  /* o simplemente eliminá width */
+  margin-right: auto;
+  margin-left: 0;
+  box-sizing: border-box;
 }
 
 .derecha {
@@ -135,16 +139,16 @@ box-sizing: border-box;
   /* padding: 20px; */
   margin-right: 0;
   margin-left: auto;
-  
+
 }
 
-.logo{
+.logo {
   width: 10px;
   height: 15px;
 }
 
 .centro_abajo {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   /* border: 1px solid #000; */
   /* background-color: #cccccc; */
   background-color: red;
@@ -152,8 +156,43 @@ box-sizing: border-box;
   margin-right: 0;
   margin-left: auto;
   /* height: 470px; */
-  
+
 }
+
+ /* .mapa iframe {
+  width: 60%;
+  aspect-ratio: 1.2;
+ 
+} */
+
+.mapa-centro iframe {
+width: 70%;
+height: 300px; /* Aumentado desde un valor típico de 300px */
+border: 0;
+border-radius: 8px;
+}
+
+.mapa-centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+
+
+
+
+/* .centro_abajo {
+display: flex;
+flex-direction: column;
+align-items: center;
+/*margin-top: 150px;*/
+/* Ajustá este valor según cuánto querés bajarlo */
+/*} */
+
 
 .imagen {
   /* margin-top: 56px; */
@@ -169,21 +208,22 @@ box-sizing: border-box;
   padding-right: 0;
 }
 
-.testimonios{
+.testimonios {
   /* background-color: #dadada; */
   background-color: red;
   padding-bottom: 4rem !important;
 }
-.testimonio{
+
+.testimonio {
   text-align: center;
-  padding: 30px 50px  ;
+  padding: 30px 50px;
 }
 
-.blanco{
+.blanco {
   color: white;
 }
 
-.staff{
+.staff {
   background: #efefef;
 }
 
@@ -192,9 +232,10 @@ box-sizing: border-box;
   font-size: 15px;
 }
 
-.letraNombreCard{
+.letraNombreCard {
   font-size: 13px;
 }
+
 /* .rectangulo-superior {
   background-color: #0d6efd;
   color: white;
