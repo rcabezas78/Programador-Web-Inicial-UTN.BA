@@ -12,6 +12,17 @@ footer {
   background-color: red;
 }
 
+.contenedor {
+  display: flex;
+  justify-content: space-between; /* o space-around / space-evenly */
+}
+
+.cartelera, .categorias, .subcomision {
+  width: 40%; /* ajustá según necesites */
+  padding: 10px;
+}
+
+
 .hero {
   /* background: url(../img/canchaModificada3.jpg) no-repeat; */
   background-size: cover;
