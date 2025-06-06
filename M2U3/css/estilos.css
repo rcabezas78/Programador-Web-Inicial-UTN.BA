@@ -111,7 +111,7 @@ body {
 }
 
 .izquierda_abajo {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   /* background-color: #cccccc; */
   background-color: yellow;
   padding: 10px;
@@ -133,7 +133,7 @@ body {
 
 .derecha_abajo {
   /* margin-top: 56px; */
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   /* background-color: #cccccc; */
   background-color: red;
   /* padding: 20px; */

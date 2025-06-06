@@ -93,7 +93,7 @@
       <!-- Columna derecha vacía para alinear -->
       <div class="col-md-2 p-0 derecha d-flex justify-content-center align-items-center"
         style="background-color: yellow; height: 340px;">
-          <img src="../M2U3/img/EscudoMurialdo.png" alt="Logo Murialdo" style="max-width: 100%; max-height: 100%">
+        <img src="../M2U3/img/EscudoMurialdo.png" alt="Logo Murialdo" style="max-width: 100%; max-height: 100%">
       </div>
     </div>
 
@@ -109,10 +109,10 @@
       <div class="col-md-3 izquierda_abajo">
         <h2 style="background-color: red">Cartelera</h2>
         <div class="col-md-12 my-3">
-          <div class="rounded py-5 testimonios" style="margin-top: 60px">
+          <div class="rounded py-5 testimonios">
             <h4 class="text-center blanco">Próxima Fecha</h4>
             <h5 class="text-center blanco">Visitante-San Martín</h5>
-            <div id="carouselProximaFecha" class="carousel slide" data-bs-ride="carousel"data-bs-interval="4000">
+            <div id="carouselProximaFecha" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
 
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselProximaFecha" data-bs-slide-to="0" class="active"
@@ -204,10 +204,10 @@
 
       <!-- Columna centro abajo -->
 
-      <div class="col-md-5 p-1 centro_abajo">
+      <div class="col-md-5 p-1 centro_abajo ">
 
-        <h2 class="blanco">Categorías</h2>
-        <div id="carouselFotos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <h2 class="blanco mt-2"style="margin-left: 100px;">Categorías</h2>
+        <div id="carouselFotos" class="carousel slide" style="margin-left: 100px;"data-bs-ride="carousel" data-bs-interval="4000">
           <div class="carousel-indicators">
             <!-- /data-bs-ride="carousel": Este atributo le dice a Bootstrap que este carrusel debe comenzar a animarse automáticamente cuando la página se carga. -->
             <!-- data-bs-interval="4000": Este atributo (opcional) establece el tiempo de retraso entre cada slide en milisegundos. En este ejemplo, lo puse en 4000 ms (4 segundos). Puedes ajustarlo al valor que prefieras. Si lo omites, el valor predeterminado es 5000 ms (5 segundos). -->
@@ -227,6 +227,10 @@
             <button type="button" data-bs-target="#carouselFotos" data-bs-slide-to="12" aria-label="Slide 13"></button>
             <button type="button" data-bs-target="#carouselFotos" data-bs-slide-to="13" aria-label="Slide 14"></button>
           </div>
+
+
+
+
 
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -283,14 +287,13 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <p>aaaaaaaaaaaaaaaaaaa</p>
-
+       
         <!-- <div id="conocenos" class="row py-4"> -->
-        <div id="conocenos" class="row">
+        <div id="conocenos" class="row mt-3">
           <!-- <div class="col-md-4 offset-md-2"> -->
 
-          <h2>Visitanos</h2>
-          <div class="mapa-centro">
+          <h2 class="ms-5">Visitanos</h2>
+          <div class="mapa-centro ms-5">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.8819605330748!2d-68.78876690828845!3d-32.9044095216801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0e97e4ca0d87%3A0x63ed0b7083774e59!2sClub%20Leonardo%20Murialdo!5e0!3m2!1ses!2sar!4v1748612855755!5m2!1ses!2sar"
               style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -331,7 +334,7 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card mt-3">
                   <img src="img/Kiosquero.jpeg" class="card-img-top" alt=" Presidente">
                   <div class="card-body">
                     <h5 class="card-title letraTituloCard">Gerente-Kiosco</h5>
@@ -340,7 +343,7 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card mt-3">
                   <img src="img/parrillero.jpeg" class="card-img-top" alt=" Presidente">
                   <div class="card-body">
                     <h5 class="card-title letraTituloCard">Parrillero</h5>
@@ -355,6 +358,51 @@
       <!-- Fin Subcomisión -->
     </div>
   </div>
+
+  <!-- Inicio Contacto -->
+
+<div class="d-flex justify-content-center align-items-center text-white py-5 text-center" style="background-color: red;">
+  <!-- <div class="d-flex justify-content-center align-items-center min-vh-100 text-white"> -->
+
+    <div class="col-md-6 text">
+      <h2 class="text-center">Contactanos</h2>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre">
+          </div>
+          <div class="col-md-6">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido">
+          </div>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="email@email.com">
+          </div>
+
+          <div class="col-md-6">
+            <label for="tel" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="tel">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 mt-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="3"></textarea>
+      </div>
+
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary mt-4 mb-4" style="background-color: yellow; color:red">Enviar</button>
+      </div>
+    </div>
+  </div>
+  <!-- cierra div Contacto-->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"

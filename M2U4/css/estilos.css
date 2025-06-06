@@ -30,13 +30,7 @@ h2 {
   text-align: center;
 }
 
-/* html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-} */
-
-#carouselFotos {
+#carouselFotos {  
   max-width: 600px;
   /* Cambiá este valor según el tamaño deseado */
   /*ajusta la flechas de izquierda y derecha a la foto*/
@@ -45,12 +39,6 @@ h2 {
   background-color: ivory;
 
 }
-
-/*#carouselExampleIndicators .carousel-item img {
-  width: 100%;      /* Asegura que la imagen se ajuste al contenedor */
-/*height: auto;     /* Mantiene la proporción */
-/*object-fit: cover;
-}*/
 
 #carouselFotos .carousel-item img {
   height: 283px;
@@ -111,7 +99,7 @@ body {
 }
 
 .izquierda_abajo {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   /* background-color: #cccccc; */
   background-color: yellow;
   padding: 10px;
@@ -133,7 +121,7 @@ body {
 
 .derecha_abajo {
   /* margin-top: 56px; */
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   /* background-color: #cccccc; */
   background-color: red;
   /* padding: 20px; */
@@ -159,11 +147,6 @@ body {
 
 }
 
- /* .mapa iframe {
-  width: 60%;
-  aspect-ratio: 1.2;
- 
-} */
 
 .mapa-centro iframe {
 width: 70%;
@@ -182,21 +165,9 @@ border-radius: 8px;
 }
 
 
-
-
-
-/* .centro_abajo {
-display: flex;
-flex-direction: column;
-align-items: center;
-/*margin-top: 150px;*/
-/* Ajustá este valor según cuánto querés bajarlo */
-/*} */
-
-
 .imagen {
   /* margin-top: 56px; */
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   /* background-color: #cccccc; */
   /* padding: 20px; */
   width: 100%;
@@ -236,69 +207,9 @@ align-items: center;
   font-size: 13px;
 }
 
-/* .rectangulo-superior {
-  background-color: #0d6efd;
-  color: white;
-  min-height: 100px;
-  padding: 20px;
-
-}
-
-.rectangulo-inferior {
-  background-color: #6c757d;
-  color: white;
-  border: 2px solid #000;
-}
-
-.rectangulo-izquierdo {
-  background-color: #6c757d;
-  color: white;
-  min-height: 270px;
-  min-width: 20px;
-  padding: 20px;
-} */
-
 .contenedor {
   display: flex;
   justify-content: center;
   width: auto;
   max-width: 1200px;
 }
-
-
-/* .contenido-izquierdo,
-.contenido-derecho {
-  width: 100%;
-}
-
-
-.contenido-superior {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.imagen-ajustada {
-  width: 100%;
-  display: block;
-} */
-
-
-/* .fila {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contenido-izquierdo,
-.contenido-derecho {
-  width: 20%;
-}
-
-.contenido-central {
-  width: 60%;
-  text-align: center;
-} */
