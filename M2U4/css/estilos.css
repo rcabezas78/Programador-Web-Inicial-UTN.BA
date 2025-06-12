@@ -34,7 +34,7 @@ h2 {
   max-width: 600px;
   /* Cambiá este valor según el tamaño deseado */
   /*ajusta la flechas de izquierda y derecha a la foto*/
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* Centra el carrusel horizontalmente */
   background-color: ivory;
 
@@ -63,7 +63,7 @@ h2 {
   height: auto;
   /* Mantiene la proporción */
   display: block;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: yellow;
   /* Centrada */
 }
@@ -93,22 +93,30 @@ body {
   padding: 10px;
   max-width: 100%;
   margin-right: auto;
-  margin-left: 0;
+  /* margin-left: 0; */
   box-sizing: border-box;
 
+}
+.cartelera-movida {
+    margin-left: 20px; /* Prueba con 20px, 30px, etc., hasta que te guste */
+    /* Si aún no se mueve, o si algo lo anula, puedes probar con !important,
+       pero úsalo con precaución, es una solución menos "limpia". */
+    /* margin-left: 20px !important; */
 }
 
 .izquierda_abajo {
-  /* border: 1px solid #000; */
-  /* background-color: #cccccc; */
-  background-color: yellow;
-  padding: 10px;
-  max-width: 100%;
-  /* o simplemente eliminá width */
-  margin-right: auto;
-  margin-left: 0;
-  box-sizing: border-box;
+    /* border: 1px solid #000; */ /* Si lo tienes, puedes comentarlo o quitarlo */
+    /* background-color: #cccccc; */ /* Asegúrate de que esta línea NO esté activa */
+    /* background-color: yellow; <--- ¡ELIMINA ESTA LÍNEA O COMENTALA! */
+    max-width: 100%;
+    margin-right: auto;
+    /* margin-left: 0; */
+    padding-left: 0; /* <-- Asegúrate de que no haya padding-left aquí, o sea 0 */
+    box-sizing: border-box;
 }
+ .izquierda_abajo .testimonios { /* Seleccionamos específicamente el div con borde amarillo dentro de izquierda_abajo */
+    margin-left: 20px !important; /* Ajusta el valor según necesites (15px, 25px, etc.) */
+} 
 
 .derecha {
   /* margin-top: 56px; */
@@ -142,7 +150,7 @@ body {
   background-color: red;
   /* padding: 20px; */
   margin-right: 0;
-  margin-left: auto;
+  /* margin-left: auto; */
   /* height: 470px; */
 
 }
