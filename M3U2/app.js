@@ -7,6 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+/*manejador de rutas*/
+
+var contactoRouter=require('./routes/contacto') /*contacto.js*/
+
 var app = express();
 
 // view engine setup
@@ -21,6 +25,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+app.use('/contacto', contactoRouter);
+
+/*ruta 1*/
+
+app.get('/prueba', function(req, res){
+  res.send('Página de prueba')
+})
+
+/*ruta 2*/
+
+app.get('/destacados', function(req, res){
+  res.send('Página de destacados')
+})
+
+/*ruta 3*/
+
+app.get('/nosotros', function(req, res){
+  res.send('Página de nosotros')
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
