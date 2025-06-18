@@ -11,6 +11,7 @@ var usersRouter = require('./routes/users');
 
 var contactoRouter=require('./routes/contacto') /*contacto.js*/
 
+
 var app = express();
 
 // view engine setup
@@ -26,7 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-app.use('/contacto', contactoRouter);
+
+app.use('/contacto', contactoRouter); /*cuando recibe contacto me va a llamar contactoRouter*/
 
 /*ruta 1*/
 
