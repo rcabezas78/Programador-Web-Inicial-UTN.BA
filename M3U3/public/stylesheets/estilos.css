@@ -68,11 +68,12 @@ h2 {
   /* Centrada */
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* background-color: red; */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Asegura que ocupen el 100% del ancho */
+    height: 100%; /* Asegura que ocupen el 100% del alto */
+    overflow-x: hidden; /* Evita barras de desplazamiento horizontales no deseadas */
 }
 
 /* index2.html */
@@ -104,15 +105,10 @@ body {
     /* margin-left: 20px !important; */
 }
 
-.izquierda_abajo {
-    /* border: 1px solid #000; */ /* Si lo tienes, puedes comentarlo o quitarlo */
-    /* background-color: #cccccc; */ /* Asegúrate de que esta línea NO esté activa */
-    /* background-color: yellow; <--- ¡ELIMINA ESTA LÍNEA O COMENTALA! */
-    max-width: 100%;
-    margin-right: auto;
-    /* margin-left: 0; */
-    padding-left: 0; /* <-- Asegúrate de que no haya padding-left aquí, o sea 0 */
-    box-sizing: border-box;
+.izquierda_abajo > div { /* Esto apunta al div amarillo */
+    background-color: yellow;
+    padding: 1rem; /* Agrega padding en todos los lados */
+    /* Elimina margin-left: 2rem; */
 }
  .izquierda_abajo .testimonios { /* Seleccionamos específicamente el div con borde amarillo dentro de izquierda_abajo */
     margin-left: 20px !important; /* Ajusta el valor según necesites (15px, 25px, etc.) */
