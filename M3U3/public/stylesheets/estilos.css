@@ -68,6 +68,17 @@ h2 {
   /* Centrada */
 }
 
+.mensaje-centrado {
+    text-align: center; /* Centra el texto */
+    color: white; /* O el color que desees para el texto del mensaje */
+    background-color: #4CAF50; /* Un color de fondo para el mensaje (verde de ejemplo) */
+    padding: 10px 20px; /* Relleno alrededor del texto */
+    margin: 20px auto; /* Margen superior/inferior de 20px, y 'auto' para centrar horizontalmente */
+    width: fit-content; /* El ancho se ajusta al contenido del texto */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    display: block; /* Asegura que se comporte como un bloque para que margin: auto funcione */
+}
+
 html, body {
     margin: 0;
     padding: 0;
