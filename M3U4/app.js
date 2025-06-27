@@ -32,34 +32,87 @@ app.use(session({
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
+// app.get('/', function (req, res) {
+
+//   var conocido = Boolean(req.session.nombre);
+
+
+//   res.render('index', {
+//     title: 'Ejercicio M3U4',
+//     conocido: conocido,
+//     nombre: req.session.nombre,
+//     edad:req.session.edad
+//   });
+// });
+
+// app.post('/Ingresar', function (req, res) {
+
+//   /*var conoc=req.body.nombre;*/
+//   if (req.body.nombre) {
+//     req.session.nombre = req.body.nombre,
+//     req.session.edad=req.body.edad
+//   }
+//   res.redirect('/');
+// });
+
+
+// app.get('/salir', function (req, res) {
+//   req.session.destroy();
+//   res.redirect('/');
+// });
+
+
+
+// 1. Ruta para la Home Page
 app.get('/', function (req, res) {
+    var conocido = Boolean(req.session.nombre);
+    var mensajeEdad = ''; // Inicializamos el mensaje de edad
 
-  var conocido = Boolean(req.session.nombre);
+    // Si es conocido y tenemos la edad, determinamos el mensaje
+    if (conocido && req.session.edad) {
+        const edad = parseInt(req.session.edad, 10); // Convertimos la edad a número
+        if (edad >= 18) { // Considerando 18 como la mayoría de edad en Argentina
+            mensajeEdad = '¡Eres mayor de edad!';
+        } else {
+            mensajeEdad = 'Eres menor de edad.';
+        }
+    }
 
-
-  res.render('index', {
-    title: 'Ejercicio M3U4',
-    conocido: conocido,
-    nombre: req.session.nombre,
-    edad:req.session.edad
-  });
+    res.render('index', {
+        title: 'Ejercicio M3U4',
+        conocido: conocido,
+        nombre: req.session.nombre,
+        edad: req.session.edad, // Pasamos la edad a la plantilla
+        mensajeEdad: mensajeEdad // Pasamos el mensaje de edad a la plantilla
+    });
 });
 
+// 2. Ruta para Manejar la Submisión del Formulario
 app.post('/Ingresar', function (req, res) {
-
-  /*var conoc=req.body.nombre;*/
-  if (req.body.nombre) {
-    req.session.nombre = req.body.nombre,
-    req.session.edad=req.body.edad
-  }
-  res.redirect('/');
+    if (req.body.nombre) {
+        req.session.nombre = req.body.nombre;
+    }
+    // Nuevo: Guardamos la edad si viene en el body
+    if (req.body.edad) {
+        req.session.edad = req.body.edad;
+    }
+    res.redirect('/');
 });
 
-
+// 3. Ruta para Salir
 app.get('/salir', function (req, res) {
-  req.session.destroy();
-  res.redirect('/');
+    req.session.destroy();
+    res.redirect('/');
 });
+
+// ... (posiblemente tu app.listen al final del archivo)
+
+
+
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
