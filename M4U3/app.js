@@ -34,35 +34,35 @@ pool.query('select nombre,edad from empleados').then(function (resultados){
 
 //Insertar
 
-var obj ={
-  nombre: 'Rodrigo',
-  apellido: 'Cabezas',
-  trabajo: 'docente',
-  edad: '47',
-  salario: '500.000',
-  mail: 'rcabezas@umaza.edu.ar'  
-}
+// var obj = {
+//   nombre: 'Rodrigo',
+//   apellido: 'Cabezas',
+//   trabajo: 'docente',
+//   edad: '47',
+//   salario: '500.000',
+//   mail: 'rcabezas@umaza.edu.ar'  
+// }
 
-pool.query('insert into empleados set ?', [obj]).then(function (resultados) {
-  console.log(resultados)  
-});
+// pool.query('insert into empleados set ?', [obj]).then(function (resultados) {
+//   console.log(resultados)  
+// });
 
-//Modificar por id
+// //Modificar por id
 
-var id=23;
-var obj = {
-  trabajo: 'Doc',
-}
+// var id=23;
+// var obj = {
+//   trabajo: 'Doc',
+// }
 
-pool.query('update empleados set ? where idEmp=?', [obj, id]).then(function(resultados){
-console.log(resultados);
-});
+// pool.query('update empleados set ? where idEmp=?', [obj, id]).then(function(resultados){
+// console.log(resultados);
+// });
 
-//Borrar
-var id=23;
-pool.query('delete from empleados where idEmp=?', [obj, id]).then(function(resultados){
-console.log(resultados);
-});
+//  //Borrar
+//  var id=23;
+//  pool.query('delete from empleados where idEmp=?', [id]).then(function(resultados){
+//  console.log(resultados);
+//  });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
