@@ -40,7 +40,7 @@ secured = async (req, res, next)=> {
     if(req.session.id_usuario){
     next();      
     }else{
-      res.redirect('admin/login')
+      res.redirect('/admin/login')
     }        
 }   catch (error){
   console.log(error);
@@ -52,7 +52,8 @@ app.use('/users', usersRouter);
 
 //rutas que agrego- Se una cuando aparezca en la ruta del navegador /admin/login
 app.use('/admin/login', loginRouter);
-app.use('/admin/novedades',secured, adminRouter);
+app.use('/admin/novedades',secured, adminRouter); 
+//app.use('/admin/novedades', adminRouter); 
 
 
 

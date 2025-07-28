@@ -13,18 +13,18 @@ router.get('/', async function (req, res, next){
 
 router.post('/', async function (req, res, next){
 try{
-    var usuario = req.body.usuario;
-    var password =req.body.password;
+    var usuario = req.body.usuario; //Rodrigo
+    var password =req.body.password;//12345
 
     console.log(req.body);
 
     var data = await usuarioModel.getUserAndPassword(usuario,password);
 
-    if(data != undefine){
+    if(data != undefined){
         req.session.id_usuario=data.id; //1
         req.session.nombre=data.usuario; //Rodrigo
 
-        res.redirect('admin/novedades');
+        res.redirect('/admin/novedades');
     } else{
            
         res.render('admin/login',{ //login.hbs

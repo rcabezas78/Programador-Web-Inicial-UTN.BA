@@ -124,11 +124,11 @@
 
         {{#unless conocido}}
             <p class="mt-4">Usuario:</p>
-            <form action="/Ingresar" method="post">
-                <input type="text" name="nombre" placeholder="Tu nombre de usuario" class="form-control mb-3">
-                <p>Contraseña:</p>
-                <input type="number" name="edad" placeholder="Tu contraseña" min="1" class="form-control mb-3">
-                <button type="submit" class="btn btn-primary">Ingresar</button>
+            <form action="/admin/login" method="post">
+                <input type="text" name="usuario" placeholder="Tu nombre de usuario" class="form-control id="usuario" mb-3">
+                <p>Password:</p>
+                <input type="password" name="password" placeholder="Tu contraseña" min="1" class="form-control id="password" mb-3">
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
             {{#if error}}
             <p>usuario y contraseña incorrecto</p>
