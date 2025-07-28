@@ -130,6 +130,9 @@
                 <input type="number" name="edad" placeholder="Tu contraseña" min="1" class="form-control mb-3">
                 <button type="submit" class="btn btn-primary">Ingresar</button>
             </form>
+            {{#if error}}
+            <p>usuario y contraseña incorrecto</p>
+            {{/if}}
         {{/unless}}
     </div>
 
