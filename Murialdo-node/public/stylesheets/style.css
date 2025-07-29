@@ -6,3 +6,34 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* Estilo para el contenedor del footer de borde a borde */
+.footer-container {
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #f8f9fa; /* Un fondo gris claro para el rectángulo */
+    border-top: 1px solid #e9ecef; /* Un borde superior sutil */
+    padding-top: 15px; /* Espacio interno superior */
+    padding-bottom: 15px; /* Espacio interno inferior */
+    margin-top: 50px; /* Margen superior para separarlo del contenido principal */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil arriba */
+}
+
+/* Estilo para el botón de cerrar sesión en el footer */
+.btn-footer-logout {
+    font-size: 0.9em; /* Un poco más pequeño o ajusta a tu gusto */
+    font-weight: 600;
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-footer-logout:hover {
+    transform: translateY(-1px); /* Efecto de levantamiento sutil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+}
+
+/* Estilo para el texto "Diseñado por" en el footer */
+.footer-container .text-muted {
+    font-size: 0.9em; /* Ajusta el tamaño de fuente */
+    color: #6c757d; /* Color de texto más suave */
+    margin-right: 20px; /* Espacio entre el texto y el botón */
+}

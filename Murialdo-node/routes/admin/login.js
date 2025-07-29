@@ -11,6 +11,16 @@ router.get('/', async function (req, res, next){
     });
 });
 
+/*Destruir variables de sesión*/
+router.get('/logout', async function (req, res, next){
+
+    req.session.destroy(); //destruir id como usuario
+    res.render('admin/login',{
+        layout: 'admin/layout'
+    });
+});
+
+
 router.post('/', async function (req, res, next){
 try{
     var usuario = req.body.usuario; //Rodrigo
