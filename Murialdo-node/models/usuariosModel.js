@@ -24,7 +24,7 @@ async function getUserAndPassword(user, password) {
 
         // Verifica si se devolvió alguna fila antes de intentar acceder a rows[0]
         if (rows.length > 0) {
-            return rows[0]; // <-- CORREGIDO: Cambiado 'row' a 'rows'
+            return rows[0]; 
         } else {
             return null; // Devuelve null si no se encuentra ningún usuario, haciéndolo explícito
         }
