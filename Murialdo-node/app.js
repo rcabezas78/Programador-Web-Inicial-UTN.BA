@@ -7,7 +7,7 @@ var logger = require('morgan');
 require('dotenv').config();
 var session = require('express-session');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/admin/index');
 var usersRouter = require('./routes/users');
 
 //Manejador de rutas
@@ -47,12 +47,14 @@ secured = async (req, res, next)=> {
   }
 }
 
-app.use('/', indexRouter);
+//app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 //rutas que agrego- Se una cuando aparezca en la ruta del navegador /admin/login
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades',secured, adminRouter); 
+app.use('/admin/index', indexRouter); 
+
 //app.use('/admin/novedades', adminRouter); 
 
 
