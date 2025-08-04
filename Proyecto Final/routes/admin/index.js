@@ -14,12 +14,28 @@
 // module.exports = router;
 
 // routes/admin/index.js
+// var express = require('express');
+// var router = express.Router();
+
+// router.get('/admin', function(req, res, next) {
+//   res.render('admin/index', { // Esto buscará views/admin/index.hbs
+//     layout: 'admin/layout', // Si usas un layout específico para el admin
+//     title: 'Panel de Administración'
+//   });
+// });
+
+// module.exports = router;
+
+
+// routes/admin/index.js
 var express = require('express');
 var router = express.Router();
 
+/* GET admin dashboard page (now the home page). */
 router.get('/', function(req, res, next) {
-  res.render('admin/index', { // Esto buscará views/admin/index.hbs
-    layout: 'admin/layout', // Si usas un layout específico para el admin
+  // Asegúrate de que la vista exista en views/admin/index.hbs
+  res.render('admin/index', { 
+    layout: 'admin/layout', 
     title: 'Panel de Administración'
   });
 });

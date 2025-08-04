@@ -27,4 +27,17 @@ async function deleteNovedadesById(id) {
         return rows;
 }
 
-module.exports = { getNovedades, deleteNovedadesById }
+//insertar novedades
+async function insertNovedad(obj) {
+    try {
+        var query = "insert into novedades set ?";
+        var rows = await pool.query(query, [obj])
+        return rows;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    } // cierra catch
+} // cierra insert
+
+module.exports = { getNovedades, deleteNovedadesById, insertNovedad }
+

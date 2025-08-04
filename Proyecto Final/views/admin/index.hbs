@@ -1,34 +1,60 @@
-{{!-- <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p> --}}
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{!-- <title>Mi Sitio Web de Partidos</title> --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    {{!-- <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/partidos.css"> --}}
+    <title>Bienvenido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        body {
+            background-color: #FFD700; /* Color amarillo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .welcome-card {
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white; /* Puedes mantener el fondo de la tarjeta en blanco para que resalte */
+        }
+        h1, p, hr {
+            color: #B22222; /* Color rojo para el texto */
+        }
+        /* Estilos para el botón de Ingresar */
+        .btn-murialdo {
+            background-color: #B22222; /* Rojo para el fondo del botón */
+            color: #FFD700; /* Amarillo para el texto del botón */
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-murialdo:hover {
+            background-color: #8B0000; /* Un rojo más oscuro al pasar el mouse para el efecto hover */
+            color: #FFD700; /* Mantiene el texto amarillo */
+        }
+    </style>
 </head>
-
 <body>
-    <h2>INDEX</h2>
-    <header>
 
-    </header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="welcome-card">
+                <h1 class="display-4">¡Bienvenido al sitio de Murialdo Hockey!</h1>
+                <p class="lead">Por favor, ingresa a tu cuenta para continuar.</p>
+                <hr class="my-4" style="border-color: #B22222;">
+                <a class="btn btn-murialdo btn-lg" href="/admin/login" role="button">Ingresar</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-    </main>
-
-    <footer class="text-center my-4">
-        <p>Diseñado por: Rodrigo Cabezas</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    {{!--
-    <script src="/javascripts/main.js"></script> --}}
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
