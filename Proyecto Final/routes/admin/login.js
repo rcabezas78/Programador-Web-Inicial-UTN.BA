@@ -20,7 +20,6 @@ router.get('/logout', async function (req, res, next){
     });
 });
 
-
 router.post('/', async function (req, res, next){
 try{
     var usuario = req.body.usuario; //Rodrigo
