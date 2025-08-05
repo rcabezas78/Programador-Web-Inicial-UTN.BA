@@ -60,6 +60,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session'); // Asegúrate de tenerlo instalado
+var hbs = require('hbs');
 
 require('dotenv').config();
 
@@ -80,6 +81,24 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+
+// Helper para agrupar elementos en Handlebars
+hbs.registerHelper('eachPartidosByGroup', function(arr, groupSize, options) {
+    if (!arr || arr.length === 0) {
+        return options.inverse(this);
+    }
+
+    var result = '';
+    for (var i = 0; i < arr.length; i += groupSize) {
+        var group = arr.slice(i, i + groupSize);
+        result += options.fn(group, {
+            data: {
+                first: (i === 0)
+            }
+        });
+    }
+    return result;
+});
 
 app.use(logger('dev'));
 app.use(express.json());

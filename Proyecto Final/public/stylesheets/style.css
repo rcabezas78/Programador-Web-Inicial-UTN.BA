@@ -93,3 +93,35 @@
     object-fit: contain;
     margin: 0 10px;
 }
+
+ body {
+            background-color: #FFD700; /* Color amarillo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .welcome-card {
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white; /* Puedes mantener el fondo de la tarjeta en blanco para que resalte */
+        }
+        h1, p, hr {
+            color: #B22222; /* Color rojo para el texto */
+        }
+        /* Estilos para el botón de Ingresar */
+        .btn-murialdo {
+            background-color: #B22222; /* Rojo para el fondo del botón */
+            color: #FFD700; /* Amarillo para el texto del botón */
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-murialdo:hover {
+            background-color: #8B0000; /* Un rojo más oscuro al pasar el mouse para el efecto hover */
+            color: #FFD700; /* Mantiene el texto amarillo */
+        }
