@@ -1,0 +1,70 @@
+body {
+    background-color: #FFD700;
+    /* Fondo amarillo intenso */
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    /* Bordes redondeados para la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* Reduje un poco el padding para un aspecto más limpio */
+    margin-bottom: 20px;
+    /* Reduje un poco el margen inferior */
+    border: 1px solid #e0e0e0;
+    /* Añadí un borde sutil */
+    width: 550px;
+    /* Ancho fijo */
+    height: 400px;
+    /* Alto fijo */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    /* Cubre el contenedor, recortando si es necesario */
+    width: 500px;
+    /* Ancho fijo */
+    height: 400px;
+    /* Alto fijo */
+    margin: 0 auto;
+    /* Centra la imagen horizontalmente dentro de la tarjeta si es necesario */
+    display: block;
+    /* Evita espacios extra debajo de la imagen */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    /* Un tamaño ligeramente más grande para el título */
+    margin-bottom: 0.5rem;
+    /* Espacio inferior para el título */
+}
+
+.card-text {
+    font-family: 'Arial', sans-serif;
+    /* Fuente estándar y legible */
+    font-size: 1rem;
+    /* Tamaño de letra normal para la descripción */
+    color: #333;
+    /* Un gris más oscuro para mejor lectura */
+}
+
+h2 {
+    font-family: 'Arial Black', Gadget, sans-serif; /* Fuente moderna y legible para el título principal */
+    font-size: 2.5rem;
+    color: #dc3545 !important;
+    text-transform: uppercase; /* Opcional: convierte el texto a mayúsculas */
+}
+
+h5 {
+    font-family: 'Arial Black', Gadget, sans-serif; /* Misma fuente para los títulos de las tarjetas */
+    font-size: 1.75rem;
+    color: #dc3545 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}

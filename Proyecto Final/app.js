@@ -74,6 +74,7 @@ var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
 //var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
 var adminNovedadesRouter = require('./routes/admin/novedades'); // Para /admin/novedades
 var adminPrincipalRouter=require('./routes/admin/principal');
+var adminCategoriasRouter=require('./routes/admin/categorias');
 var app = express();
 
 //const express = require('express');
@@ -125,6 +126,7 @@ app.use('/', indexRouter);
 app.use('/admin/login', adminLoginRouter);
 app.use('/admin/principal', adminPrincipalRouter);
 app.use('/admin/novedades', adminNovedadesRouter);
+app.use('/admin/categorias', adminCategoriasRouter);
 
 
 
