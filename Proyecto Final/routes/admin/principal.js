@@ -2,12 +2,10 @@
 var express = require('express');
 var router = express.Router();
 
-const app = express();
-
 /* GET admin dashboard page (now the home page). */
 router.get('/', function(req, res, next) {
   // Asegúrate de que la vista exista en views/admin/index.hbs
-  res.render('admin/index', { 
+  res.render('admin/principal', { 
     layout: 'admin/layout', 
     title: 'Panel de Administración'
   });

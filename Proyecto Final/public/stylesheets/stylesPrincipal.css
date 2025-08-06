@@ -1,0 +1,49 @@
+/* Estilos globales y tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-top: 56px; /* Para que el contenido no quede detrás del navbar fijo */
+}
+
+/* Sección Hero (Principal) */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') no-repeat center center/cover;
+    height: 70vh; /* 70% de la altura de la ventana */
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+/* Tarjetas de partidos y noticias */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #171746;
+}
+
+.bg-primary {
+    background-color: #171746 !important;
+}
+
+/* Separadores */
+hr {
+    border-top: 2px solid #ccc;
+    width: 50%;
+    margin: 3rem auto;
+}

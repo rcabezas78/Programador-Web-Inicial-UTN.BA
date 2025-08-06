@@ -53,6 +53,9 @@
 // module.exports = app;
 
 
+
+
+
 // app.js
 var createError = require('http-errors');
 var express = require('express');
@@ -67,13 +70,21 @@ require('dotenv').config();
 // --- Importar tus archivos de ruta ---
 var indexRouter = require('./routes/admin/index'); // El index principal ahora es el del admin
 var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
+//var indexRouter = require('./routes/admin/index'); // El index principal ahora es el del admin
+//var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
 var adminNovedadesRouter = require('./routes/admin/novedades'); // Para /admin/novedades
-
+var adminPrincipalRouter=require('./routes/admin/principal');
 var app = express();
+
+//const express = require('express');
+//const path = require('path');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+// Sirve los archivos estáticos desde la carpeta 'public'
+//app.use(express.static(path.join(__dirname, 'public')));
 
 // Configuración de la sesión
 app.use(session({
@@ -106,12 +117,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // --- Definición y Montaje de Rutas ---
 // La ruta raíz '/' será manejada por el router de administración
 app.use('/', indexRouter); 
 // Las demás rutas de administración se montan con su prefijo
 app.use('/admin/login', adminLoginRouter);
+app.use('/admin/principal', adminPrincipalRouter);
 app.use('/admin/novedades', adminNovedadesRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
