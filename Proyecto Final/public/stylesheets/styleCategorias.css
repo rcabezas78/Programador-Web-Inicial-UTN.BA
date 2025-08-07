@@ -68,3 +68,7 @@ h5 {
 .text-danger {
     color: #dc3545 !important;
 }
+ .admin-text {
+    color: yellow;
+    font-size: 1.2rem; /* Tamaño de letra más pequeño */
+ }
