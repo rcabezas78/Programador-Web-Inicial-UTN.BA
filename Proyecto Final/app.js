@@ -10,7 +10,7 @@ var hbs = require('hbs');
 require('dotenv').config();
 
 // --- Importar tus archivos de ruta ---
-var indexRouter = require('./routes/admin/index'); // El index principal ahora es el del admin
+var indexRouter = require('./routes/admin/principal'); // El index principal ahora es el del admin
 var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
 //var indexRouter = require('./routes/admin/index'); // El index principal ahora es el del admin
 //var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
@@ -84,5 +84,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
