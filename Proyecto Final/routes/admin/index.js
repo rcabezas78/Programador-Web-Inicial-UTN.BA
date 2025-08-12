@@ -8,6 +8,9 @@ var principalRouter = require('./principal');
 var novedadesRouter = require('./novedades');
 var categoriasRouter = require('./categorias');
 
+// Sirve archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Usa cada sub-router dentro del router de admin
 router.use('/', principalRouter); // La ruta principal de admin
 router.use('/login', loginRouter);
@@ -15,8 +18,7 @@ router.use('/novedades', novedadesRouter);
 router.use('/categorias', categoriasRouter);
 
 
-// Sirve archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

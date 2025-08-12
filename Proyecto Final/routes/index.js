@@ -4,6 +4,9 @@ var router = express.Router();
 // Importa el modelo si es necesario
 // var partidosModel = require('../../models/partidosModel'); 
 
+// Sirve archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
 /* GET home page. */
 router.get('/', async function(req, res, next) {
   try {
