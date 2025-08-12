@@ -1,11 +1,10 @@
- body {
-            background-color: #FFD700; /* Fondo amarillo */
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+body {
+    background-color: #FFD700;
+    font-family: Arial, sans-serif;
+    display: flex; /* Habilita el layout flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    min-height: 100vh; /* Ocupa al menos la altura completa de la ventana */
+}
         .login-card {
             max-width: 400px;
             width: 100%;
@@ -33,3 +32,4 @@
             margin-top: 15px;
             font-weight: bold;
         }
+        
