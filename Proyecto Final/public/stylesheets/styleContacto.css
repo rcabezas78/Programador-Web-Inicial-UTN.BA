@@ -1,25 +1,25 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* color: #333; */
-    background-color: #FFD700;
+    background-color: #FFFF00; /* Amarillo brillante y puro */
     padding-top: 56px;
     /* Para que el contenido no quede detrás del navbar fijo */
 }
 /* Estilos para el fondo de la página */
 .bg-yellow-custom {
-    background-color: #FFD700; /* Un tono de amarillo más elegante de Bootstrap */
+    background-color: #FFFF00; /* Amarillo brillante y puro */
 }
 
 /* Estilos para el contenedor del formulario */
 .bg-red-custom {
-    background-color: #dc3545; /* Un tono de rojo de Bootstrap */
+    background-color: #ff0019; /* Un tono de rojo de Bootstrap */
     color: #fff; /* Texto blanco para mejor contraste */
 }
 
 /* Estilos para el botón de envío */
 .btn-yellow-red {
-    background-color: #FFD700; /* Fondo amarillo */
-    color: #dc3545; /* Texto rojo */
+    background-color: #FFFF00; /* Amarillo brillante y puro */
+    color: #ff0019; /* Texto rojo */
     font-weight: bold;
     border: none;
     padding: 10px 40px;
@@ -29,11 +29,11 @@ body {
 
 .btn-yellow-red:hover {
     background-color: #e0a800; /* Tono más oscuro al pasar el ratón */
-    color: #a71d2a;
+    color: #ff0019;
 }
 /* Estilos para los campos de entrada y el área de texto */
 .form-control {
-    background-color: #FFD700; /* Fondo amarillo */
+    background-color: #FFFF00; /* Amarillo brillante y puro */
     border: 1px solid #e0a800; /* Borde de un tono amarillo más oscuro */
     color: #333; /* Color de texto oscuro para que sea legible */
 }
@@ -41,4 +41,28 @@ body {
 /* Estilo para el marcador de posición (placeholder) */
 .form-control::placeholder {
     color: #8c7800; /* Color del texto del placeholder */
+}
+
+.admin-text {
+    color: yellow;
+    font-size: 1.2rem; /* Tamaño de letra más pequeño */
+ }
+
+ /* Títulos "Visítanos" y "Contáctanos" */
+h2.text-center {
+    color: #DC143C; /* Rojo intenso, usa el mismo color para el h2 del formulario */
+}
+
+/* En caso de que tengas otros títulos en el mismo color */
+h2 {
+    color: #DC143C; /* Rojo intenso */
+}
+
+/* Contenedor principal de la información de contacto con iconos */
+.contact-info {
+    color: #DC143C; /* Rojo intenso para los textos de los datos de contacto */
+}
+
+.bg-red-custom h2.text-center.mb-4 {
+    color: #FFFFFF; /* Blanco */
 }

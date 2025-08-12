@@ -1,7 +1,9 @@
 body {
-    background-color: #FFD700;
-    /* Fondo amarillo intenso */
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: #333; */
+    background-color: #FFFF00; /* Amarillo brillante y puro */
+    padding-top: 56px;
+    /* Para que el contenido no quede detrás del navbar fijo */
 }
 
 .card {
@@ -15,7 +17,7 @@ body {
     /* Reduje un poco el margen inferior */
     border: 1px solid #e0e0e0;
     /* Añadí un borde sutil */
-    width: 550px;
+    width: 430px;
     /* Ancho fijo */
     height: 400px;
     /* Alto fijo */
@@ -26,9 +28,9 @@ body {
     border-top-right-radius: 10px;
     object-fit: cover;
     /* Cubre el contenedor, recortando si es necesario */
-    width: 500px;
+    width: 390px;
     /* Ancho fijo */
-    height: 400px;
+    height: 350px;
     /* Alto fijo */
     margin: 0 auto;
     /* Centra la imagen horizontalmente dentro de la tarjeta si es necesario */
@@ -52,21 +54,32 @@ body {
     /* Un gris más oscuro para mejor lectura */
 }
 
+/* Aplicar la fuente 'Montserrat' a todos los títulos h2 */
 h2 {
-    font-family: 'Arial Black', Gadget, sans-serif; /* Fuente moderna y legible para el título principal */
-    font-size: 2.5rem;
-    color: #dc3545 !important;
-    text-transform: uppercase; /* Opcional: convierte el texto a mayúsculas */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Le da el peso de negrita, lo que la hace ver elegante y con más presencia */
+    color: #DC143C; /* Rojo intenso */
+}
+
+/* Modificación específica para el título "Contáctanos" */
+.bg-red-custom h2.text-center.mb-4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF; /* Blanco */
 }
 
 h5 {
     font-family: 'Arial Black', Gadget, sans-serif; /* Misma fuente para los títulos de las tarjetas */
     font-size: 1.75rem;
-    color: #dc3545 !important;
+    color: #ff0019 !important;
+}
+
+h3{
+    color: #ff0019 !important;
 }
 
 .text-danger {
-    color: #dc3545 !important;
+    color: #ff0019 !important;
 }
  .admin-text {
     color: yellow;
