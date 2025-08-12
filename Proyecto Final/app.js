@@ -10,13 +10,14 @@ var hbs = require('hbs');
 require('dotenv').config();
 
 // --- Importar tus archivos de ruta ---
-var indexRouter = require('./routes/admin/index'); // El index principal ahora es el del admin
+var indexRouter = require('./routes/admin/principal'); // El index principal ahora es el del admin
 var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
 //var indexRouter = require('./routes/admin/index'); // El index principal ahora es el del admin
 //var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
 var adminNovedadesRouter = require('./routes/admin/novedades'); // Para /admin/novedades
 var adminPrincipalRouter=require('./routes/admin/principal');
 var adminCategoriasRouter=require('./routes/admin/categorias');
+var adminContactoRouter=require('./routes/admin/contacto');
 var app = express();
 
 //const express = require('express');
@@ -29,19 +30,11 @@ app.set('view engine', 'hbs');
 // Sirve los archivos estáticos desde la carpeta 'public'
 //app.use(express.static(path.join(__dirname, 'public')));
 
-// Configuración de la sesión
-app.use(session({
-  secret: 'tu-clave-secreta-aqui',
-  resave: false,
-  saveUninitialized: true
-}));
-
 // Helper para agrupar elementos en Handlebars
 hbs.registerHelper('eachPartidosByGroup', function(arr, groupSize, options) {
     if (!arr || arr.length === 0) {
         return options.inverse(this);
     }
-
     var result = '';
     for (var i = 0; i < arr.length; i += groupSize) {
         var group = arr.slice(i, i + groupSize);
@@ -53,6 +46,17 @@ hbs.registerHelper('eachPartidosByGroup', function(arr, groupSize, options) {
     }
     return result;
 });
+
+
+
+// Configuración de la sesión
+app.use(session({
+  secret: 'tu-clave-secreta-aqui',
+  resave: false,
+  saveUninitialized: true
+}));
+
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -69,6 +73,7 @@ app.use('/admin/login', adminLoginRouter);
 app.use('/admin/principal', adminPrincipalRouter);
 app.use('/admin/novedades', adminNovedadesRouter);
 app.use('/admin/categorias', adminCategoriasRouter);
+app.use('/admin/contacto', adminContactoRouter);
 
 
 

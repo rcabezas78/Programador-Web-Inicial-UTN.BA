@@ -1,0 +1,44 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: #333; */
+    background-color: #FFD700;
+    padding-top: 56px;
+    /* Para que el contenido no quede detrás del navbar fijo */
+}
+/* Estilos para el fondo de la página */
+.bg-yellow-custom {
+    background-color: #FFD700; /* Un tono de amarillo más elegante de Bootstrap */
+}
+
+/* Estilos para el contenedor del formulario */
+.bg-red-custom {
+    background-color: #dc3545; /* Un tono de rojo de Bootstrap */
+    color: #fff; /* Texto blanco para mejor contraste */
+}
+
+/* Estilos para el botón de envío */
+.btn-yellow-red {
+    background-color: #FFD700; /* Fondo amarillo */
+    color: #dc3545; /* Texto rojo */
+    font-weight: bold;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-yellow-red:hover {
+    background-color: #e0a800; /* Tono más oscuro al pasar el ratón */
+    color: #a71d2a;
+}
+/* Estilos para los campos de entrada y el área de texto */
+.form-control {
+    background-color: #FFD700; /* Fondo amarillo */
+    border: 1px solid #e0a800; /* Borde de un tono amarillo más oscuro */
+    color: #333; /* Color de texto oscuro para que sea legible */
+}
+
+/* Estilo para el marcador de posición (placeholder) */
+.form-control::placeholder {
+    color: #8c7800; /* Color del texto del placeholder */
+}
