@@ -28,7 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // Sirve los archivos estáticos desde la carpeta 'public'
-//app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Helper para agrupar elementos en Handlebars
 hbs.registerHelper('eachPartidosByGroup', function(arr, groupSize, options) {

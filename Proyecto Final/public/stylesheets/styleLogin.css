@@ -1,0 +1,35 @@
+ body {
+            background-color: #FFD700; /* Fondo amarillo */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-card {
+            max-width: 400px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            background-color: #ffffff;
+        }
+        .form-label, .form-control::placeholder {
+            color: #dc3545; /* Letras de etiquetas y placeholders en rojo */
+        }
+        .btn-murialdo {
+            background-color: #dc3545; /* Rojo de Bootstrap (danger) */
+            border-color: #dc3545;
+            color: #FFD700; /* Amarillo para el texto */
+        }
+        .btn-murialdo:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+            color: #FFD700;
+        }
+        .error-message {
+            color: #dc3545; /* Mensaje de error en rojo */
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }

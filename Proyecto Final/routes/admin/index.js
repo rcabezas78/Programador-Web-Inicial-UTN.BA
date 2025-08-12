@@ -15,6 +15,9 @@ router.use('/novedades', novedadesRouter);
 router.use('/categorias', categoriasRouter);
 
 
+// Sirve archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('admin/principal', { 
