@@ -4,6 +4,7 @@ body {
     display: flex; /* Habilita el layout flexbox */
     flex-direction: column; /* Apila los elementos verticalmente */
     min-height: 100vh; /* Ocupa al menos la altura completa de la ventana */
+    padding-top: 56px;
 }
         .login-card {
             max-width: 400px;
@@ -32,4 +33,8 @@ body {
             margin-top: 15px;
             font-weight: bold;
         }
-        
+
+        .admin-text {
+    color: yellow;
+    font-size: 1.2rem; /* Tamaño de letra más pequeño */
+ }
