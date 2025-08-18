@@ -17,7 +17,7 @@ body {
     /* Reduje un poco el margen inferior */
     border: 1px solid #e0e0e0;
     /* Añadí un borde sutil */
-    width: 430px;
+    width: 600px;
     /* Ancho fijo */
     height: 400px;
     /* Alto fijo */
@@ -28,7 +28,7 @@ body {
     border-top-right-radius: 10px;
     object-fit: cover;
     /* Cubre el contenedor, recortando si es necesario */
-    width: 390px;
+    width: 550px;
     /* Ancho fijo */
     height: 350px;
     /* Alto fijo */

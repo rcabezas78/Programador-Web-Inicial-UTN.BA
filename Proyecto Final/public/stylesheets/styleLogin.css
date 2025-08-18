@@ -1,5 +1,5 @@
 body {
-    background-color: #FFD700;
+    background-color: #FFFF00; ;
     font-family: Arial, sans-serif;
     display: flex; /* Habilita el layout flexbox */
     flex-direction: column; /* Apila los elementos verticalmente */
