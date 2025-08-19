@@ -1,0 +1,69 @@
+/* Estilo para los botones de la galería */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: #333; */
+    background-color: #FFFF00; /* Amarillo brillante y puro */
+    padding-top: 56px;
+    /* Para que el contenido no quede detrás del navbar fijo */
+}
+/* Estilo para los botones cuando están inactivos (no seleccionados) */
+.gallery-filter-btn {
+    border-radius: 50px;
+    font-weight: 600;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    /* Estilo del botón inactivo: fondo transparente, borde rojo y letras rojas */
+    background-color: transparent;
+    border: 2px solid #FF0000;
+    color: #FF0000;
+}
+/* Estilo para cuando pasas el mouse por encima de cualquier botón de filtro */
+.gallery-filter-btn:hover {
+    transform: translateY(-2px);
+    background-color: #FF0000; /* El color que quieras al pasar el mouse */
+    color: #FFFFFF; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo para las imágenes de la galería */
+.gallery-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover; /* Para que las imágenes mantengan su proporción sin deformarse */
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Animación de entrada para las imágenes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-item {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Cambia el color de fondo y el borde del botón activo */
+.btn-primary {
+    background-color: red; /* Un azul moderno */
+    border-color:red;
+    color:yellow;
+}
+
+/* Cambia el color del texto y el borde de los botones inactivos */
+.btn-outline-primary {
+    color: red;
+    border-color: red;
+}
+/* Estilo para los botones cuando están activos (seleccionados) */
+.btn-active-custom {
+    background-color: #FF0000; /* Fondo rojo */
+    color: #FFFF00; /* Letras amarillas */
+    border-color: #FF0000; /* Borde rojo */
+}
+h2 {
+    color: #333; /* Un gris oscuro para el texto principal */
+}

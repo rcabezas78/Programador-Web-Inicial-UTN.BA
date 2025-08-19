@@ -18,6 +18,7 @@ var adminNovedadesRouter = require('./routes/admin/novedades'); // Para /admin/n
 var adminPrincipalRouter=require('./routes/admin/principal');
 var adminCategoriasRouter=require('./routes/admin/categorias');
 var adminContactoRouter=require('./routes/admin/contacto');
+var adminGaleriaRouter=require('./routes/admin/galeria');
 var app = express();
 
 //const express = require('express');
@@ -49,7 +50,6 @@ hbs.registerHelper('eachPartidosByGroup', function(arr, groupSize, options) {
 });
 
 
-
 // Configuración de la sesión
 app.use(session({
   secret: 'tu-clave-secreta-aqui',
@@ -57,13 +57,11 @@ app.use(session({
   saveUninitialized: true
 }));
 
-
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 
 
 // --- Definición y Montaje de Rutas ---
@@ -75,6 +73,7 @@ app.use('/admin/principal', adminPrincipalRouter);
 app.use('/admin/novedades', adminNovedadesRouter);
 app.use('/admin/categorias', adminCategoriasRouter);
 app.use('/admin/contacto', adminContactoRouter);
+app.use('/admin/galeria', adminGaleriaRouter);
 
 
 

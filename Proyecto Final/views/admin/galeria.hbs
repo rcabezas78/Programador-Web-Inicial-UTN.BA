@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/styleGaleria.css">
+    <title>Galería de Fotos</title>
+</head>
+<body>
+    <main>
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Galería de Fotos</h2>
+
+            <div class="text-center mb-5">
+                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="all">Todas</button>
+                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="partidos">Partidos</button>
+                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="entrenamientos">Entrenamientos</button>
+                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="eventos1">Evento1</button>
+                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="eventos2">Evento2</button>
+                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="eventos3">Evento3</button>
+            </div>
+
+            <div class="row g-4 gallery-grid">
+                <div class="col-12 col-md-6 col-lg-4 gallery-item partidos">
+                    <a href="/images/galeria/River.png" data-lightbox="gallery" data-title="Descripción del Partido 1">
+                        <img src="/images/galeria/river.png" class="img-fluid rounded shadow-sm gallery-img" alt="Partido 1">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 gallery-item entrenamientos">
+                    <a href="/images/galeria/entrenamiento1.jpg" data-lightbox="gallery" data-title="Descripción del Entrenamiento 1">
+                        <img src="/images/galeria/river.png" class="img-fluid rounded shadow-sm gallery-img" alt="Entrenamiento 1">
+                    </a>
+                </div>
+            </div>  
+        </div>
+    </main>
+    <script src="/javascripts/gallery.js"></script>
+</body>
+</html>
