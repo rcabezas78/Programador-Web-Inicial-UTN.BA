@@ -1,130 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administración - Novedades</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9Oer-2uLRyqOQ4zWJgoraK7aCD/L+jXWdBCX1w56tW+xedC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="/stylesheets/styleNovedades.css">
+    <title>Panel de Administración</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <style>
+        body {
+            background-color: #FFFF00; /* Fondo amarillo */
+        }
+        .container-fluid {
+            padding-top: 20px;
+        }
+        .header-section {
+            background-color: #FFD700;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-murialdo {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            color: white;
+            font-weight: bold;
+        }
+        .table-custom th, .table-custom td {
+            vertical-align: middle;
+        }
+        .btn-action {
+            width: 38px;
+            height: 38px;
+            padding: 0;
+             color: white !important;
+        }
+        
+    </style>
 </head>
-
 <body>
+
 <div class="container-fluid">
-    {{!-- Fila para el mensaje de bienvenida (se redujo el espacio superior con mt-2) --}}
-    <div class="row mt-2">
-        <div class="col-12">
-            <div class="card p-4">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h4>Bienvenido/a al Panel de Novedades</h4>
-                        <p class="text-muted">Aquí podrás gestionar las novedades de tu sitio.</p>
-                    </div>
-                    <div class="text-end">
-                        <span class="me-3 text-muted">Diseñado por: Rodrigo Cabezas</span>
-                        <a href="/admin/login/logout" class="btn btn-murialdo btn-sm">Cerrar Sesión</a>
-                    </div>
-                </div>
-            </div>
+    <header class="d-flex justify-content-between align-items-center header-section">
+        <div>
+            <h1 class="text-danger">Panel de Administración</h1>
+            <p class="mb-0">Aquí podrás gestionar tu contenido.</p>
+        </div>
+        <a href="#" class="btn btn-murialdo">Cerrar Sesión</a>
+    </header>
+
+    <div class="card p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="text-danger">Listado de Contenido</h2>
+            <a href="#" class="btn btn-murialdo">+ Nuevo</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-custom">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Título del elemento 1</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-action">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a href="#" class="btn btn-danger btn-action">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
-    {{!-- Fila para el Listado de novedades --}}
-    <div class="row mt-1">
-        <div class="col-12">
-            <div class="card p-4">
-                <div class="header-content mb-2">
-                    <h2>Listado de novedades</h2>
-                    <a href="/admin/novedades/agregar" class="btn btn-murialdo">
-                        <i class="fas fa-plus"></i> Nuevo
-                    </a>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table table-striped table-hover mb-2">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Título</th>
-                                <th scope="col">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{#each novedades}}
-                            <tr>
-                                <th scope="row">{{id}}</th>
-                                <td>{{titulo}}</td>
-                                <td>
-                                    <div class="d-flex gap-2">
-                                        <a href="/admin/novedades/modificar/{{id}}"
-                                            class="btn btn-sm btn-edit btn-action">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                        <a href="/admin/novedades/eliminar/{{id}}"
-                                            class="btn btn-sm btn-delete btn-action">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                            {{/each}}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{!-- Fila para el Carrusel de Próximos Partidos --}}
-    {{!-- <div class="row mt-1">
-        <div class="col-12 text-center mt-3">
-            <h2 class="mb-4">Próximos Partidos</h2>
-        </div>
-        <div class="col-12">
-            <div id="proximosPartidosCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    {{#eachPartidosByGroup partidos 3}}
-                    <div class="carousel-item {{#if @first}}active{{/if}}">
-                        <div class="d-flex justify-content-center">
-                            {{#each this}}
-                            <div class="partido-card">
-                                <div class="partido-titulo">{{torneo}}</div>
-                                <div class="d-flex justify-content-center align-items-center mt-2">
-                                    <img src="/images/{{logoLocal}}" alt="{{equipoLocal}}" class="equipo-logo">
-                                    <div class="ms-2 me-2">
-                                        <div class="partido-fecha">{{fecha}}</div>
-                                        <div class="partido-hora">{{hora}}</div>
-                                    </div>
-                                    <img src="/images/{{logoVisitante}}" alt="{{equipoVisitante}}"
-                                        class="equipo-logo">
-                                </div>
-                                <div class="partido-equipo-nombre">{{equipoLocal}} vs. {{equipoVisitante}}</div>
-                            </div>
-                            {{/each}}
-                        </div>
-                    </div>
-                    {{/eachPartidosByGroup}}
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#proximosPartidosCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#proximosPartidosCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div> --}}
-    
-    {{!-- Sección de Próximos Partidos --}}
-    </div>    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
