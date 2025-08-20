@@ -33,7 +33,7 @@ try{
         req.session.id_usuario=data.id; //1
         req.session.nombre=data.usuario; //Rodrigo
 
-        res.redirect('/admin/novedades');
+        res.redirect('/admin/contenido');
     } else{
            
         res.render('admin/login',{ //login.hbs

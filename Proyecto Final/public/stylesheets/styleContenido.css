@@ -1,10 +1,15 @@
+/* Estilos Generales y de Contenedores */
 body {
-    background-color: #FFD700;
-    /* Fondo amarillo */
-    font-family: Arial, sans-serif;
-    padding-top: 60px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: #333; */
+    background-color: #FFFF00; /* Amarillo brillante y puro */
+    padding-top: 76px;
+    /* Para que el contenido no quede detrás del navbar fijo */
 }
 
+/* .container-fluid {
+    padding-top: 20px;
+} */
 
 .card {
     background-color: #ffffff;
@@ -14,10 +19,9 @@ body {
     margin-bottom: 30px;
 }
 
-h2,
-h4 {
+/* Estilos de Tipografía */
+h2, h4 {
     color: #dc3545;
-    /* Letras rojas para los títulos */
     font-weight: bold;
 }
 
@@ -25,14 +29,7 @@ h4 {
     color: #6c757d !important;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd)>* {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.table-hover>tbody>tr:hover>* {
-    background-color: #f0f0f0;
-}
-
+/* Estilos de Botones */
 .btn-murialdo {
     background-color: #dc3545;
     border-color: #dc3545;
@@ -55,7 +52,6 @@ h4 {
     color: white;
 }
 
-
 .btn-edit {
     background-color: #007bff;
     border-color: #007bff;
@@ -66,11 +62,33 @@ h4 {
     border-color: #dc3545;
 }
 
+/* Estilos para Tablas */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: #f0f0f0;
+}
+
+.table-custom th,
+.table-custom td {
+    vertical-align: middle;
+}
+
+/* Estilos de Encabezado y Flexbox */
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+/* .header-section {
+    background-color: #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+} */
 
 /* Estilos para el Carrusel de Partidos */
 #proximosPartidosCarousel {
@@ -118,7 +136,7 @@ h4 {
     filter: invert(100%);
 }
 
- .admin-text {
+.admin-text {
     color: yellow;
-    font-size: 1.2rem; /* Tamaño de letra más pequeño */
- }
+    font-size: 1.2rem;
+}

@@ -14,11 +14,12 @@ var indexRouter = require('./routes/admin/principal'); // El index principal aho
 var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
 //var indexRouter = require('./routes/admin/index'); // El index principal ahora es el del admin
 //var adminLoginRouter = require('./routes/admin/login'); // Para /admin/login
-var adminNovedadesRouter = require('./routes/admin/novedades'); // Para /admin/novedades
+var adminContenidoRouter = require('./routes/admin/contenido'); // Para /admin/contenido
 var adminPrincipalRouter=require('./routes/admin/principal');
 var adminCategoriasRouter=require('./routes/admin/categorias');
 var adminContactoRouter=require('./routes/admin/contacto');
 var adminGaleriaRouter=require('./routes/admin/galeria');
+var adminABMContenidoRouter=require('./routes/admin/ABMContenido');
 var app = express();
 
 //const express = require('express');
@@ -70,10 +71,11 @@ app.use('/', indexRouter);
 // Las demás rutas de administración se montan con su prefijo
 app.use('/admin/login', adminLoginRouter);
 app.use('/admin/principal', adminPrincipalRouter);
-app.use('/admin/novedades', adminNovedadesRouter);
+app.use('/admin/contenido', adminContenidoRouter);
 app.use('/admin/categorias', adminCategoriasRouter);
 app.use('/admin/contacto', adminContactoRouter);
 app.use('/admin/galeria', adminGaleriaRouter);
+app.use('/admin/ABMContenido', adminABMContenidoRouter);
 
 
 

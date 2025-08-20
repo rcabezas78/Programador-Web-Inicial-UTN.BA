@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var novedadesModel = require('../../models/novedadesModel');
+var contenidoModel = require('../../models/contenidoModel');
 var isLoggedIn = require('../../middleware/auth'); // Ruta al middleware
 
 // ✅ Aplica el middleware a TODAS las rutas de este router.
@@ -10,26 +10,26 @@ router.use(isLoggedIn);
 // Las rutas siguientes ya están protegidas y NO necesitan el middleware en su firma.
 router.get('/', async function(req, res, next) {
     try {
-        let novedades = await novedadesModel.getNovedades();
-        res.render('admin/novedades', {
+        let contenido = await contenidoModel.getContenido();
+        res.render('admin/contenido', {
             layout: 'admin/layout',
             usuario: req.session.nombre,
-            novedades: novedades
+            contenido: contenido
         });
     } catch (error) {
         console.log(error);
-        res.status(500).send('Error al cargar la página de novedades');
+        res.status(500).send('Error al cargar la página de contenido');
     }
 });
 
-/* Eliminar novedad */
+/* Eliminar contenido */
 router.get('/eliminar/:id', async function (req, res, next) {
     const id = req.params.id;
-    await novedadesModel.deleteNovedadesById(id);
-    res.redirect('/admin/novedades');
+    await contenidoModel.deleteContenidoById(id);
+    res.redirect('/admin/contenido');
 });
 
-/* Agregar novedad */
+/* Agregar contenido */
 router.get('/agregar', (req, res, next) => {
     res.render('admin/agregar', {
         layout: 'admin/layout'
@@ -39,8 +39,8 @@ router.get('/agregar', (req, res, next) => {
 router.post('/agregar', async (req, res, next) => {
     try {
         if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
-            await novedadesModel.insertNovedad(req.body);
-            res.redirect('/admin/novedades');
+            await contenidoModel.insertContenido(req.body);
+            res.redirect('/admin/contenido');
         } else {
             res.render('admin/agregar', {
                 layout: 'admin/layout',
@@ -53,18 +53,18 @@ router.post('/agregar', async (req, res, next) => {
         res.render('admin/agregar', {
             layout: 'admin/layout',
             error: true,
-            message: 'No se cargo la novedad'
+            message: 'No se cargó el contenido'
         });
     }
 });
 
-/* Modificar novedad */
+/* Modificar contenido */
 router.get('/modificar/:id', async (req, res, next) => {
     let id = req.params.id;
-    let novedad = await novedadesModel.getNovedadById(id);
+    let contenido = await contenidoModel.getContenidoById(id);
     res.render('admin/modificar', {
         layout: 'admin/layout',
-        novedad
+        contenido
     });
 });
 
@@ -75,14 +75,14 @@ router.post('/modificar', async (req, res, next) => {
             subtitulo: req.body.subtitulo,
             cuerpo: req.body.cuerpo
         };
-        await novedadesModel.modificarNovedadById(obj, req.body.id);
-        res.redirect('/admin/novedades');
+        await contenidoModel.modificarContenidoById(obj, req.body.id);
+        res.redirect('/admin/contenido');
     } catch (error) {
         console.log(error);
         res.render('admin/modificar', {
             layout: 'admin/layout',
             error: true,
-            message: 'No se modifico la novedad'
+            message: 'No se modificó el contenido'
         });
     }
 });

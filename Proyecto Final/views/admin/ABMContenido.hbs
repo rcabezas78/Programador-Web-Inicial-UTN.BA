@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/stylesheets/styleABMContenido.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+    <header class="d-flex justify-content-between align-items-center header-section">
+        <div>
+            <h1 class="text-danger">Panel de Administración</h1>
+            <p class="mb-0">Aquí podrás gestionar tu contenido.</p>
+        </div>
+        <a href="#" class="btn btn-murialdo">Cerrar Sesión</a>
+    </header>
+
+    <div class="card p-4 mx-auto" style="max-width: 600px;">
+        <h2 class="text-danger">Agregar Nueva Foto</h2>
+        
+        <form action="/admin/contenido/agregar" method="post" enctype="multipart/form-data">
+            
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Subir Imagen</label>
+                <input type="file" class="form-control" id="imagen" name="imagen" required>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-murialdo">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

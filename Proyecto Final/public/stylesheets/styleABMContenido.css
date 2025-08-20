@@ -1,0 +1,7 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: #333; */
+    background-color: #FFFF00; /* Amarillo brillante y puro */
+    padding-top: 56px;
+    /* Para que el contenido no quede detrás del navbar fijo */
+}
