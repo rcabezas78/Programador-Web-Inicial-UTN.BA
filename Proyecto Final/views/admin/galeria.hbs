@@ -9,86 +9,36 @@
 </head>
 
 <body>
-    <main>
-        <div class="container my-5">
-            <h2 class="text-center mb-4">Galería de Fotos</h2>
-
-            <div class="text-center mb-5">
-                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="all">Todas</button>
-                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="partidos">Partidos</button>
-                <button class="btn btn-outline-primary gallery-filter-btn"
-                    data-filter="entrenamientos">Entrenamientos</button>
-                <button class="btn btn-outline-primary gallery-filter-btn"
-                    data-filter="argentino-Infantil-2025">Argentino Infantil 2025</button>
-                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="Lomas2025">Torneo de Lomas
-                    2025</button>
-                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="eventos3">Evento3</button>
-            </div>
-
-            <div class="row g-4 gallery-grid">
-                <div class="col-12 col-md-6 col-lg-4 gallery-item partidos">
-                    <a href="/images/galeria/River.png" data-lightbox="gallery" data-title="Descripción del Partido 1">
-                        <img src="/images/galeria/river.png" class="img-fluid rounded shadow-sm gallery-img"
-                            alt="Partido 1">
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 gallery-item entrenamientos">
-                    <a href="/images/galeria/entrenamiento1.jpg" data-lightbox="gallery"
-                        data-title="Descripción del Entrenamiento 1">
-                        <img src="/images/galeria/river.png" class="img-fluid rounded shadow-sm gallery-img"
-                            alt="Entrenamiento 1">
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 gallery-item argentino-Infantil-2025">
-                    <a href="/images/galeria/ArgentinoInfantil2025/ArgentinoInfantil-01.jpg" data-lightbox="gallery"
-                        data-title="Argentino Infantil 2025-1">
-                    <img src="/images/galeria/ArgentinoInfantil2025/ArgentinoInfantil-01.jpg"
-                        class="img-fluid rounded shadow-sm gallery-img" alt="Argentino Infantil 2025">
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 gallery-item argentino-Infantil-2025">
-                    <a href="/images/galeria/ArgentinoInfantil2025/ArgentinoInfantil-02.jpg" data-lightbox="gallery"
-                        data-title="Argentino Infantil 2025-2">
-                    <img src="/images/galeria/ArgentinoInfantil2025/ArgentinoInfantil-02.jpg"
-                        class="img-fluid rounded shadow-sm gallery-img" alt="Argentino Infantil 2025">
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 gallery-item argentino-Infantil-2025">
-                    <a href="/images/galeria/ArgentinoInfantil2025/ArgentinoInfantil-03.jpg" data-lightbox="gallery"
-                        data-title="Argentino Infantil 2025-3">
-                    <img src="/images/galeria/ArgentinoInfantil2025/ArgentinoInfantil-03.jpg"
-                        class="img-fluid rounded shadow-sm gallery-img" alt="Argentino Infantil 2025">
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 gallery-item Lomas2025">
-                    <a href="/images/galeria/Lomas2025/Lomas2025-01.jpg" data-lightbox="gallery"
-                        data-title="Descripción del Torneo de Lomas 2025-1">
-                        <img src="/images/galeria/Lomas2025/Lomas2025-01.jpg"
-                            class="img-fluid rounded shadow-sm gallery-img" alt="Torneo de Lomas 2025">
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 gallery-item Lomas2025">
-                    <a href="/images/galeria/Lomas2025/Lomas2025-02.jpg" data-lightbox="gallery"
-                        data-title="Descripción del Torneo de Lomas 2025-2">
-                        <img src="/images/galeria/Lomas2025/Lomas2025-02.jpg"
-                            class="img-fluid rounded shadow-sm gallery-img" alt="Torneo de Lomas 2025">
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 gallery-item Lomas2025">
-                    <a href="/images/galeria/Lomas2025/Lomas2025-03.jpg" data-lightbox="gallery"
-                        data-title="Descripción del Torneo de Lomas 2025">
-                        <img src="/images/galeria/Lomas2025/Lomas2025-03.jpg"
-                            class="img-fluid rounded shadow-sm gallery-img" alt="Torneo de Lomas 2025-3">
-                    </a>
-                </div>
-            </div>
+  <main>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Galería de Fotos</h2>
+        {{!-- Filter buttons for each event --}}
+        <div class="text-center mb-5">
+            <button class="btn btn-outline-primary gallery-filter-btn active" data-filter="all">Todas</button>
+            {{#each eventos}}
+                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="{{@key}}">{{@key}}</button>
+            {{/each}}
         </div>
-    </main>
+        
+        {{!-- Dynamic content of the gallery --}}
+        <div class="row g-4 gallery-grid">
+            {{#each eventos}}
+                <div class="col-12 gallery-event-group" id="{{@key}}">
+                    <h2 class="titulo-evento">{{@key}}</h2>
+                    <div class="row galeria-row">
+                        {{#each this}}
+                            <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="{{this.evento}}">
+                                <a href="/images/uploads/{{this.nombreArchivo}}" data-lightbox="gallery" data-title="{{this.descripcion}}">
+                                    <img src="/images/uploads/{{this.nombreArchivo}}" class="img-fluid rounded shadow-sm gallery-img" alt="{{this.descripcion}}">
+                                </a>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
     <script src="/javascripts/gallery.js"></script>
 </body>
 

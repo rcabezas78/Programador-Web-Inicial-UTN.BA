@@ -67,3 +67,49 @@ body {
 h2 {
     color: #333; /* Un gris oscuro para el texto principal */
 }
+
+
+
+
+
+
+
+
+/* Style for the 3-column gallery */
+.galeria-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Spacing between images */
+}
+
+/* Style for each gallery item */
+.gallery-item {
+    flex: 1 1 calc(33.333% - 15px);
+    box-sizing: border-box;
+    display: flex; /* To center the image inside the cell */
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Optional: Sets a minimum height for alignment */
+}
+
+/* Image style for uniform size */
+.gallery-img {
+    width: 100%; /* Image takes full width of its container */
+    height: 15cm; /* Fixed height for uniform display */
+    object-fit: contain; /* Prevents cropping and maintains aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Event titles */
+.titulo-evento {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}

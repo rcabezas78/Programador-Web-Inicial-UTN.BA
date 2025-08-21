@@ -67,8 +67,7 @@ router.post('/agregar', upload.single('imagen'), async (req, res, next) => {
         const obj = {
             evento: req.body.evento, 
             descripcion: req.body.descripcion,
-            categorias: req.body.categorias,
-            //imagen: req.file ? `/images/uploads/${req.file.filename}` : null,
+            categorias: req.body.categorias,            
             nombreArchivo: req.file ? req.file.filename : null,
             tipoContenido: req.file ? req.file.mimetype : null,
             fechaSubida: new Date()
