@@ -50,7 +50,6 @@ hbs.registerHelper('eachPartidosByGroup', function(arr, groupSize, options) {
     return result;
 });
 
-
 // Configuración de la sesión
 app.use(session({
   secret: 'tu-clave-secreta-aqui',
@@ -64,7 +63,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 
-
 // --- Definición y Montaje de Rutas ---
 // La ruta raíz '/' será manejada por el router de administración
 app.use('/', indexRouter); 
@@ -76,8 +74,6 @@ app.use('/admin/categorias', adminCategoriasRouter);
 app.use('/admin/contacto', adminContactoRouter);
 app.use('/admin/galeria', adminGaleriaRouter);
 app.use('/admin/ABMContenido', adminABMContenidoRouter);
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

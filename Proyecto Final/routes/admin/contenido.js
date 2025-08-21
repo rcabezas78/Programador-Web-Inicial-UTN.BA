@@ -38,7 +38,7 @@ router.get('/agregar', (req, res, next) => {
 
 router.post('/agregar', async (req, res, next) => {
     try {
-        if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
+        if (req.body.evento != "" && req.body.categoria != "" && req.body.descripcion != "") {
             await contenidoModel.insertContenido(req.body);
             res.redirect('/admin/contenido');
         } else {
@@ -71,9 +71,9 @@ router.get('/modificar/:id', async (req, res, next) => {
 router.post('/modificar', async (req, res, next) => {
     try {
         let obj = {
-            titulo: req.body.titulo,
-            subtitulo: req.body.subtitulo,
-            cuerpo: req.body.cuerpo
+            evento: req.body.evento,
+            categoria: req.body.categoria,
+            descripcion: req.body.descripcion
         };
         await contenidoModel.modificarContenidoById(obj, req.body.id);
         res.redirect('/admin/contenido');

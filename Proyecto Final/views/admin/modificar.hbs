@@ -1,19 +1,19 @@
 <div class="contanier" style="margin:50px auto">
     <div class="row">
         <div class="col-6 offset-3">
-            <h4>Modificar la novedad {{novedad.id}} </h4>
-            <form method="post" action="/admin/novedades/modificar">
-                <input type="hidden" value="{{novedad.id}}" name="id">
+            <h4>Modificar Contenido {{galeria.id}} </h4>
+            <form method="post" action="/admin/contenido/modificar">
+                <input type="hidden" value="{{galeria.id}}" name="id">
                 <div class="form-group">
-                    <input type="text" placeholder="Titulo" value="{{novedad.titulo}}" class="form-control"
-                        name="titulo">
+                    <input type="text" placeholder="Evento" value="{{novedad.evento}}" class="form-control"
+                        name="evento">
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Subtitulo" class="form-control"
-                        name="subtitulo">{{novedad.subtitulo}}</textarea>
+                    <textarea placeholder="Categorías" class="form-control"
+                        name="categorias">{{novedad.categorias}}</textarea>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Cuerpo" class="form-control" name="cuerpo">{{novedad.cuerpo}}</textarea>
+                    <textarea placeholder="Descripción" class="form-control" name="descripcion">{{novedad.descripcion}}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Modificar</button>
             </form>
