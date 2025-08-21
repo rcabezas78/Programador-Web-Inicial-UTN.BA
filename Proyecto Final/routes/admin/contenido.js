@@ -36,27 +36,27 @@ router.get('/agregar', (req, res, next) => {
     });
 });
 
-router.post('/agregar', async (req, res, next) => {
-    try {
-        if (req.body.evento != "" && req.body.categoria != "" && req.body.descripcion != "") {
-            await contenidoModel.insertContenido(req.body);
-            res.redirect('/admin/contenido');
-        } else {
-            res.render('admin/agregar', {
-                layout: 'admin/layout',
-                error: true,
-                message: 'Todos los campos son requeridos'
-            });
-        }
-    } catch (error) {
-        console.log(error);
-        res.render('admin/agregar', {
-            layout: 'admin/layout',
-            error: true,
-            message: 'No se cargó el contenido'
-        });
-    }
-});
+// router.post('/agregar', async (req, res, next) => {
+//     try {
+//         if (req.body.evento != "" && req.body.categoria != "" && req.body.descripcion != "") {
+//             await contenidoModel.insertContenido(req.body);
+//             res.redirect('/admin/contenido');
+//         } else {
+//             res.render('admin/agregar', {
+//                 layout: 'admin/layout',
+//                 error: true,
+//                 message: 'Todos los campos son requeridos'
+//             });
+//         }
+//     } catch (error) {
+//         console.log(error);
+//         res.render('admin/agregar', {
+//             layout: 'admin/layout',
+//             error: true,
+//             message: 'No se cargó el contenido'
+//         });
+//     }
+// });
 
 /* Modificar contenido */
 router.get('/modificar/:id', async (req, res, next) => {
