@@ -1,45 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/styleGaleria.css">
-    <title>Galería de Fotos</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/lightbox.min.css">
+        <link rel="stylesheet" href="/stylesheets/styleGaleria.css">
+        <title>Galería de Fotos</title>
+    </head>
 
-<body>
-  <main>
-    <div class="container my-5">
-        <h2 class="text-center mb-4">Galería de Fotos</h2>
-        {{!-- Filter buttons for each event --}}
-        <div class="text-center mb-5">
-            <button class="btn btn-outline-primary gallery-filter-btn active" data-filter="all">Todas</button>
-            {{#each eventos}}
-                <button class="btn btn-outline-primary gallery-filter-btn" data-filter="{{@key}}">{{@key}}</button>
-            {{/each}}
-        </div>
-        
-        {{!-- Dynamic content of the gallery --}}
-        <div class="row g-4 gallery-grid">
-            {{#each eventos}}
-                <div class="col-12 gallery-event-group" id="{{@key}}">
-                    <h2 class="titulo-evento">{{@key}}</h2>
-                    <div class="row galeria-row">
-                        {{#each this}}
+    <body>
+        <main>
+            <div class="container my-5">
+                <h1 class="text-center mb-4 fs-3">Galería de Fotos</h1>
+                {{!-- Filter buttons for each event --}}
+                <div class="text-center mb-5">
+                    <button class="btn btn-outline-primary gallery-filter-btn active" data-filter="all">Todas</button>
+                    {{#each eventos}}
+                    <button class="btn btn-outline-primary gallery-filter-btn" data-filter="{{@key}}">{{@key}}</button>
+                    {{/each}}
+                </div>
+
+                {{!-- Dynamic content of the gallery --}}
+                <div class="row g-4 gallery-grid">
+                    {{#each eventos}}
+                    <div class="col-12 gallery-event-group" id="{{@key}}">
+                        <h2 class="titulo-evento">{{@key}}</h2>
+                        <div class="row galeria-row">
+                            {{#each this}}
                             <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="{{this.evento}}">
                                 <a href="/images/uploads/{{this.nombreArchivo}}" data-lightbox="gallery" data-title="{{this.descripcion}}">
                                     <img src="/images/uploads/{{this.nombreArchivo}}" class="img-fluid rounded shadow-sm gallery-img" alt="{{this.descripcion}}">
                                 </a>
                             </div>
-                        {{/each}}
+                            {{/each}}
+                        </div>
                     </div>
+                    {{/each}}
                 </div>
-            {{/each}}
-        </div>
-    </div>
-</main>
-    <script src="/javascripts/gallery.js"></script>
-</body>
+            </div>
+        </main>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/javascripts/lightbox.min.js"></script>
+        <script src="/javascripts/galeria.js"></script>
+        {{!-- <script src="/javascripts/gallery.js"></script> --}}
+    </body>
 
-</html>
+    </html>

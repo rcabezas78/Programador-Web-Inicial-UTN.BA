@@ -113,3 +113,28 @@ h2 {
     margin-top: 40px;
     margin-bottom: 20px;
 }
+
+
+
+/* Para centrar el contenedor de botones si no lo estuviera */
+.text-center {
+    text-align: center;
+}
+
+/* Para agrandar el título */
+.titulo-evento {
+    font-size: 2.5rem; /* Ajusta el valor a tu gusto */
+    text-align: center;
+}
+
+/* Para agrandar el texto y los contornos de los botones */
+.gallery-filter-btn {
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+    padding: 0.8rem 1.6rem; /* Aumenta el padding para que el botón sea más grande */
+}
+
+.gallery-filter-btn.active {
+    background-color: red; /* o el color que desees */
+    color: white; /* para que el texto sea visible */
+    border-color: red;
+}
