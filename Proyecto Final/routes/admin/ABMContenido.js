@@ -1,3 +1,5 @@
+// ✅ En tu archivo routes/admin/ABMContenido.js
+
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
@@ -6,7 +8,7 @@ var isLoggedIn = require('../../middleware/auth');
 var contenidoModel = require('../../models/contenidoModel');
 
 
-// ✅ Configuración de Multer para el almacenamiento de archivos
+// Configuración de Multer para el almacenamiento de archivos
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'public/images/uploads');
@@ -19,7 +21,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 
-// ✅ Aplica el middleware de autenticación a todas las rutas
+// Aplica el middleware de autenticación a todas las rutas
 router.use(isLoggedIn);
 
 
@@ -54,7 +56,6 @@ router.get('/agregar', (req, res, next) => {
 router.post('/agregar', upload.single('imagen'), async (req, res, next) => {
     try {
         if (!req.body.evento || !req.body.descripcion || !req.body.categorias) {
-            // ✅ En caso de error de validación, renderiza la vista con el error
             res.render('admin/agregar', {
                 layout: 'admin/layout',
                 error: true,
@@ -63,11 +64,10 @@ router.post('/agregar', upload.single('imagen'), async (req, res, next) => {
             return;
         }
 
-        // ✅ Construye el objeto completo con los datos del formulario y del archivo
         const obj = {
             evento: req.body.evento, 
             descripcion: req.body.descripcion,
-            categorias: req.body.categorias,            
+            categorias: req.body.categorias,
             nombreArchivo: req.file ? req.file.filename : null,
             tipoContenido: req.file ? req.file.mimetype : null,
             fechaSubida: new Date()
@@ -75,12 +75,10 @@ router.post('/agregar', upload.single('imagen'), async (req, res, next) => {
 
         await contenidoModel.insertContenido(obj);
         
-        // Redirige al usuario después de un guardado exitoso
         res.redirect('/admin/ABMContenido');
         
     } catch (error) {
         console.log(error);
-        // ✅ En caso de error en el servidor, renderiza la vista con el error
         res.render('admin/agregar', {
             layout: 'admin/layout',
             error: true,
@@ -90,40 +88,50 @@ router.post('/agregar', upload.single('imagen'), async (req, res, next) => {
 });
 
 
-// ✅ Rutas de eliminar y modificar
+// ✅ Rutas de eliminar
 router.get('/eliminar/:id', async function (req, res, next) {
-    const id = req.params.id;
-    await contenidoModel.deleteContenidoById(id);
-    res.redirect('/admin/ABMContenido');
+    try {
+        const id = req.params.id;
+        await contenidoModel.deleteContenidoById(id);
+        res.redirect('/admin/ABMContenido');
+    } catch (error) {
+        console.error(error);
+        res.redirect('/admin/ABMContenido?error=true&message=No se pudo eliminar el registro.');
+    }
 });
 
+
+// ✅ Ruta GET para la página de modificar (mostrar el formulario)
 router.get('/modificar/:id', async (req, res, next) => {
-    let id = req.params.id;
-    let contenido = await contenidoModel.getContenidoById(id);
-    res.render('admin/modificar', {
-        layout: 'admin/layout',
-        contenido
-    });
+    try {
+        let id = req.params.id;
+        let contenido = await contenidoModel.getContenidoById(id);
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            contenido
+        });
+    } catch (error) {
+        console.error(error);
+        res.redirect('/admin/ABMContenido?error=true&message=No se encontró el registro para modificar.');
+    }
 });
 
-// router.post('/modificar', async (req, res, next) => {
-//     try {
-//         let obj = {
-//             titulo: req.body.titulo,
-//             subtitulo: req.body.subtitulo,
-//             cuerpo: req.body.cuerpo
-//         };
-//         await contenidoModel.modificarContenidoById(obj, req.body.id);
-//         res.redirect('/admin/ABMContenido');
-//     } catch (error) {
-//         console.log(error);
-//         res.render('admin/modificar', {
-//             layout: 'admin/layout',
-//             error: true,
-//             message: 'No se modificó el contenido'
-//         });
-//     }
-// });
 
+// ✅ Ruta POST para procesar la modificación (recibir los datos del formulario)
+router.post('/modificar', async (req, res, next) => {
+    try {
+        // ✅ Corrige los campos del objeto para que coincidan con tu tabla 'galeria'
+        let obj = {
+            evento: req.body.evento,
+            descripcion: req.body.descripcion,
+            categorias: req.body.categorias
+        };
+        await contenidoModel.modificarContenidoById(obj, req.body.id);
+        res.redirect('/admin/ABMContenido');
+    } catch (error) {
+        console.log(error);
+        res.redirect('/admin/ABMContenido?error=true&message=No se pudo modificar el contenido');
+    }
+});
 
 module.exports = router;

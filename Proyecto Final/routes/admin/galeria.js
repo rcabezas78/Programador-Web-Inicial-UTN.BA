@@ -21,7 +21,9 @@ router.get('/', async function(req, res, next) {
 
         // ✅ Corrige esta línea para que apunte a la vista correcta
         res.render('admin/galeria', {
-            eventos: eventos
+            eventos: eventos,
+            layout: 'admin/layout'
+            
         });
     } catch (error) {
         console.error("Error al cargar la galería:", error);

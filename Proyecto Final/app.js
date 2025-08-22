@@ -20,6 +20,7 @@ var adminCategoriasRouter=require('./routes/admin/categorias');
 var adminContactoRouter=require('./routes/admin/contacto');
 var adminGaleriaRouter=require('./routes/admin/galeria');
 var adminABMContenidoRouter=require('./routes/admin/ABMContenido');
+//const router = require('./routes/admin/galeria');
 var app = express();
 
 //const express = require('express');
