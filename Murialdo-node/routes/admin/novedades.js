@@ -38,6 +38,14 @@ router.get('/agregar', (req, res, next) => {
 /* Envía los datos de la novedad */
 router.post('/agregar', async (req, res, next) => {
     try {
+
+        var img_id='';
+        if(req.files && Object.keys(req.files).length>0){
+            imagen=req.files.imagen;
+            img_id=(await uploader(imagen.tempFilePath)).public_id;            
+        }
+
+
         if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
             await novedadesModel.insertNovedad(req.body);
             res.redirect('/admin/novedades');
