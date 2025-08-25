@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 offset-3">
             <h4>Agregar Novedad</h4>
-            <form action="/admin/novedades/agregar" method="post">
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
                 
                 <div class="form-group">
                     {{!-- <label for="titulo">Título</label> --}}
@@ -18,10 +18,10 @@
                 </div>
 
                 {{!-- ✅ Agregamos el campo para subir la imagen --}}
-                {{!-- <div class="form-group">
+                <div class="form-group">
                     <label for="imagen">Subir Imagen</label>
-                    <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*" required>
-                </div> --}}
+                    <input type="file" class="form-control" id="imagen" name="imagen">
+                </div>
                 
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
